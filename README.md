@@ -1,3 +1,3 @@
 # Ethernat-Solution-and-Explanation
-## 1. Hello Ethernaut ☆☆☆☆☆
-## 2. Fallback ★☆☆☆☆
+## 0. Hello Ethernaut ☆☆☆☆☆
+## 1. Fallback ★☆☆☆☆
