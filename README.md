@@ -19,7 +19,8 @@
     1. Since only the owner can withdraw funds, it is required to complete the first target before this step.
     2. Once you become the owner, it is effortless to withdraw all the funds!
 
-### Detailed Steps (work in the console)
+### Detailed Steps (work through the console)
+
 ```js
 await contract.contribute({ value: toWei("0.000001") }) // contribute first, so that you'll be able to call receive
 await contract.getContribution().then(fund => fromWei(fund.toString())) // confirm that you have contributed
