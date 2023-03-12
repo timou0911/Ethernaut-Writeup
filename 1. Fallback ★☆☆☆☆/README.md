@@ -1,13 +1,13 @@
 ## Level Target
 
 1. Take ownership of the contract.
-2. Withdraw all funds from the contract. (Only the owner can do so)
+2. Withdraw all funds from the contract. (Only `owner` can do so)
 
 ## Break Down & Analyze
 
 1. Two ways to take ownership:
-    1. Contribute more eth than the owner does → unrealistic, you can’t contribute more than 0.001 ether at one transaction, and the owner already has 1000 ether of contribution when the contract is built. (unfair, right?)
-    2. So the other way to hack the contract is from receive function, in order to call receive, you’ll need to satisfy two conditions.
+    1. Contribute more eth than `owner` does → unrealistic, you can’t contribute more than 0.001 ether at one transaction, plus the owner already has 1000 ethers of contribution when the contract is built. (unfair, right?)
+    2. So the other way to hack the contract is from `receive` function, in order to call `receive`, you’ll need to satisfy two conditions.
         * send some eth when calling receive.
         * already had contributions before.
         
