@@ -1,4 +1,4 @@
-### ### Target
+### Target
 
 1. Take ownership of the contract
 
