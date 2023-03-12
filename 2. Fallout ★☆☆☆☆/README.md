@@ -4,7 +4,7 @@
 
 ## Break Down & Analyze
 
-The constructor has typo: Fal”1”out. Since the wrong spelling, it is served as a function rather than a constructor, so everyone can call it and take the ownership.
+The constructor has a typo: Fal”1”out. Since the wrong spelling, it is served as a function rather than a constructor, so everyone can call it and take ownership.
 
 ## Detailed Steps (work through the console)
 
