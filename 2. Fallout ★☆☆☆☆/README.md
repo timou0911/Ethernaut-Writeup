@@ -6,7 +6,7 @@
 
 ## Target
 
-1. Take ownership of the contract
+1. Take ownership of the contract.
 
 ## BreakDown & Analysis
 
