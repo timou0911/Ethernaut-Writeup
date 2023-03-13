@@ -40,5 +40,11 @@
 
 See [Attack.sol](https://github.com/timou0911/Ethernat-Solution-and-Explanation/blob/main/3.%20Coin%20Flip%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
 
-## Random v.s. Pseudo-random — How to generate truly random numbers in Solidity?
+## How to generate truly random numbers in Solidity?
+
+Due to the determinacy of blockchain, it’s difficult to generate random numbers in Solidity.
+
+A trivial way to generate random numbers is by doing calculations on global variables about blocks, such as `blockhash` or `block.timestamp`. Nonetheless, these variables can be manipulated by miners to some degree, so it’s definitely not a safe way to generate randomness.
+
+A proper method to add randomness to our smart contracts is by collecting data outside the chain. Namely, use <b>oracles</b> to obtain real-world information. [Chainlink VRF](https://docs.chain.link/vrf/v2/subscription/examples/get-a-random-number) is the most popular way to achieve it. We can add it to our code to gain powerful randomness.
 
