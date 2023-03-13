@@ -4,6 +4,10 @@
 
 1. How to call other contracts’ functions.
 
+    1. Use `interface` and then pass in the contract address when calling specific functions.
+    
+    2. Create a contract variable, and pass in the contract address to call a specific function.
+
 2. Generating random numbers in Solidity.
 
 3. The understanding of blocks as well as global variables like `blockhash` and `block.number`.
