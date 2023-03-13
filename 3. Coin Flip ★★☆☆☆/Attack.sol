@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-interface ICoinFlip { // use interface to get access to the level contract
+interface ICoinFlip { // use interface to get access to the target contract
     function flip(bool _gurss) external returns (bool);
 }
 
