@@ -31,3 +31,10 @@
     1. In fact, it is not necessary to determine the block number of our transaction. Rather, we simply need to place the transaction of our malicious contract and the transaction calling the flip function in the same block.
     
     2. In order to perform this trick, we can create a function(`attack`) in our malicious contract that calls the `flip` function in the target contract, so both the `attack` function we call and the `flip` function that the `attack` calls will be packed into the same block!
+
+## Detailed Steps
+
+See [Attack.sol](https://github.com/timou0911/Ethernat-Solution-and-Explanation/blob/main/3.%20Coin%20Flip%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
+
+## Random v.s. Pseudo-random — How to generate truly random numbers in Solidity?
+
