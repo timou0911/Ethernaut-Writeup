@@ -1,1 +1,1 @@
-[Ethernaut](https://ethernaut.openzeppelin.com/) breakdown and solutions.
+[Ethernaut](https://ethernaut.openzeppelin.com/) guide and solutions.
