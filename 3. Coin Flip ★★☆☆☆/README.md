@@ -40,7 +40,7 @@
 
 See [Attack.sol](https://github.com/timou0911/Ethernat-Solution-and-Explanation/blob/main/3.%20Coin%20Flip%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
 
-## How to safely generate random numbers in Solidity?
+## How to Safely Generate Random Numbers in Solidity?
 
 Due to the determinacy of blockchain, it’s difficult to generate random numbers in Solidity.
 
