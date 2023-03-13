@@ -1,5 +1,13 @@
 [Level 1. Fallback](https://ethernaut.openzeppelin.com/level/0x3c34A342b2aF5e885FcaA3800dB5B205fEfa3ffB)
 
+### Concepts
+
+1. The basis of coding logic.
+    1. Find which lines of code you can use to crack the level.
+    2. In order to access these lines of code, the requirement you’ll need to fulfill.
+2. The understanding of `msg.value`.
+    1. You can send some eth to the contract when calling a function, and the amount of eth you send can be accessed by `msg.value`.
+
 ## Level Target
 
 1. Take ownership of the contract.
