@@ -29,7 +29,8 @@ contract Attack {
         } else {
             consecutiveWins = 0;
         }
-
-        return consecutiveWins;
+        
+        // keep track on the wins(or you can type `await contract.consecutiveWins().then(wins => parseInt(wins))` in the console)
+        return consecutiveWins; 
     }
 }
