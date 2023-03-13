@@ -22,7 +22,7 @@ contract Attack {
         uint256 coinFlip = blockValue / FACTOR;
         bool side = coinFlip == 1 ? true : false;
 
-        bool correct = ICoinFlip(coinFlip_addr).flip(side);
+        bool correct = ICoinFlip(coinFlip_addr).flip(side); // call the flip function
 
         if (correct) {
             consecutiveWins++;
