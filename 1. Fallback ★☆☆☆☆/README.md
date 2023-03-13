@@ -2,13 +2,13 @@
 
 ## Concepts
 
-1. The basis of coding logic
+1. The basis of coding logic.
 
     1. Find which lines of code you can use to crack the level.
     
     2. In order to access these lines of code, the requirement you’ll need to fulfill.
     
-2. The understanding of `msg.value`
+2. The understanding of `msg.value`.
 
     1. `msg.value`: number of wei sent with the message.
 
@@ -20,7 +20,7 @@
 
 ## BreakDown & Analysis
 
-1. Two ways to take ownership:
+1. Two ways to take ownership.
 
     1. Contribute more eth than `owner` does → unrealistic, you can’t contribute more than 0.001 ether at one transaction, plus the owner already has 1000 ethers of contribution when the contract is built. (unfair, right?)
     
@@ -32,7 +32,7 @@
         
         Once you meet these two conditions and successfully call receive, the first target is fulfilled.
         
-2. Only the owner can withdraw the funds:
+2. Only the owner can withdraw the funds.
 
     1. Since only the owner can withdraw funds, it is required to complete the first target before this step.
     
