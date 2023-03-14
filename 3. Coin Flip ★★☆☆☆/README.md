@@ -18,7 +18,7 @@
     
     3. Other global variables can be found in [Solidity Docs](https://docs.soliditylang.org/en/v0.8.19/units-and-global-variables.html).
 
-## Target
+## Level Target
 
 1. Guess the correct outcome of a coin flip game 10 times in a row.
 
