@@ -20,7 +20,7 @@
 
 ## BreakDown & Analysis
 
-1. Two ways to take ownership.
+1. Two ways to take ownership. (we can’t get access to the `constructor` since it’s not included in the contract bytecode)
 
     1. Contribute more eth than `owner` does → unrealistic, you can’t contribute more than 0.001 ether at one transaction, plus the owner already has 1000 ethers of contribution when the contract is built. (unfair, right?)
     
