@@ -32,7 +32,7 @@
     
 2. The method to retrieve block number.
 
-    1. In fact, it is not necessary to determine the block number of our transaction. Rather, we simply need to place the transaction of our malicious contract and the transaction calling the flip function in the same block.
+    1. **In fact, it is not necessary to determine the block number of our transaction. Rather, we simply need to place the transaction of our malicious contract and the transaction calling the flip function in the same block.**
     
     2. In order to perform this trick, we can create a function(`attack`) in our malicious contract that calls the `flip` function in the target contract, so both the `attack` function we call and the `flip` function that the `attack` calls will be packed into the same block!
 
@@ -46,5 +46,5 @@ Due to the determinacy of blockchain, it’s difficult to generate random number
 
 A trivial way to generate random numbers is by doing calculations on global variables about blocks, such as `blockhash` or `block.timestamp`. Nonetheless, these variables can be manipulated by miners to some degree, so it’s definitely not a safe way to generate randomness.
 
-A proper method to add randomness to our smart contracts is by collecting data outside the chain. Namely, use <b>oracles</b> to obtain real-world information. [Chainlink VRF](https://docs.chain.link/vrf/v2/subscription/examples/get-a-random-number) is the most popular way to achieve it. We can add it to our code to gain powerful randomness.
+**A proper method to add randomness to our smart contracts is by collecting data outside the chain. Namely, use oracles to obtain real-world information. [Chainlink VRF](https://docs.chain.link/vrf/v2/subscription/examples/get-a-random-number) is the most popular way to achieve it. We can add it to our code to gain powerful randomness.**
 
