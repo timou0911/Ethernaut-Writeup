@@ -20,9 +20,9 @@
     
 2. To successfully call `changeOwner`, we’ll have to make the value of `msg.sender` and the value of `tx.origin` different.
 
-    1. `msg.sender` is the last caller that invokes the function, it can be an externally-owned account(EOA) or a contract account(CA).
+    1. **`msg.sender` is the last caller that invokes the function, it can be an externally-owned account(EOA) or a contract account(CA).**
    
-    2. `tx.origin` is the original caller that starts the transaction, since smart contracts can’t be invoked automatically, there will be an EOA that initiates the transaction, so `tx.origin` can only be an EOA.
+    2. **`tx.origin` is the original caller that starts the transaction, since smart contracts can’t be invoked automatically, there will be an EOA that initiates the transaction, so `tx.origin` can only be an EOA.**
         
     Consider a simple example: Alice → contract A → contract B.
         
@@ -86,4 +86,4 @@ Here’s one possible hacking process:
 
 Attackers may utilize soical engineering to incresase the success rate. Also, they can create multiple contracts to hide their real purpose.
 
-To protect your contract, it’s not suitable to check permission through `tx.origin`. A better practice is to use `msg.sneder`.
+To protect your contract, it’s not suitable to check permission through `tx.origin`. **A better practice is to use `msg.sneder`.**
