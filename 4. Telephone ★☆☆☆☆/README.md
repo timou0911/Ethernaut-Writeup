@@ -20,7 +20,7 @@
     
 2. To successfully call `changeOwner`, we’ll have to make the value of `msg.sender` and the value of `tx.origin` different.
 
-    1. `msg.sender` is the address that invokes the function, it can be an externally-owned account(EOA) or a contract account(CA).
+    1. `msg.sender` is the last caller that invokes the function, it can be an externally-owned account(EOA) or a contract account(CA).
    
     2. `tx.origin` is the original caller that starts the transaction, since smart contracts can’t be invoked automatically, there will be an EOA that initiates the transaction, so `tx.origin` can only be an EOA.
         
