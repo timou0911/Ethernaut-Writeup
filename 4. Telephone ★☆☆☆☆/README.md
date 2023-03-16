@@ -77,13 +77,13 @@ Here’s one possible hacking process:
 
 1. First of all, the attacker discovered that Bob had a keen interest in cryptocurrency investments.
 
-2. The attacker sends a fake crypto-investing teaching website to Bob via email.
+2. The attacker sent a fake crypto-investing teaching website to Bob via email.
 
-3. Since it is common to connect a wallet to such websites, Bob may be lured to purchase a lesson by signing the transaction through his wallet.
+3. Since it is common to connect a wallet to such websites, Bob might be lured to purchase a lesson by signing the transaction through his wallet.
 
-4. However, the transaction he signed didn’t buy him the online lesson; the transaction calls `attack` in the malicious contract, and then `attack` calls `transfer` in the Wallet contract, transferring all of Bob’s ethers to the attacker’s wallet.
+4. However, the transaction he signed didn’t buy him the online lesson; the transaction called `attack` in the malicious contract, and then `attack` called `transfer` in the Wallet contract, transferring all of Bob’s ethers to the attacker’s wallet.
 
-5. Actually, Bob does get a lesson now.
+5. Actually, Bob doid get a lesson now.
 
 Attackers may utilize soical engineering to incresase the success rate. Also, they can create multiple contracts to hide their real purpose.
 
