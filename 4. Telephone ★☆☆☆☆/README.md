@@ -83,7 +83,7 @@ Here’s one possible hacking process:
 
 4. However, the transaction he signed didn’t buy him the online lesson; the transaction called `attack` in the malicious contract, and then `attack` called `transfer` in the Wallet contract, transferring all of Bob’s ethers to the attacker’s wallet.
 
-5. Actually, Bob doid get a lesson now.
+5. Actually, Bob did get a lesson now.
 
 Attackers may utilize soical engineering to incresase the success rate. Also, they can create multiple contracts to hide their real purpose.
 
