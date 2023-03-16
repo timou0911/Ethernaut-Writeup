@@ -2,7 +2,7 @@
 
 ## Concepts
 
-1. The meaning of `msg.sender` and `tx.origin`, also the difference between these two global variables.
+1. The meaning of `msg.sender` and `tx.origin`, as well as the difference between these two global variables.
 
 ## Level Target
 
@@ -22,7 +22,7 @@
 
     1. **`msg.sender` is the last caller that invokes the function, it can be an externally-owned account(EOA) or a contract account(CA).**
    
-    2. **`tx.origin` is the original caller that starts the transaction, since smart contracts can’t be invoked automatically, there will be an EOA that initiates the transaction, so `tx.origin` can only be an EOA.**
+    2. **`tx.origin` represents the EOA that initiated the transaction. Since smart contracts can’t be invoked automatically, there will be an EOA that initiates the transaction, therefore the `tx.origin` value always refers to the original EOA that started the transaction.**
         
     Consider a simple example: Alice → contract A → contract B.
         
@@ -38,6 +38,7 @@ See [Attack.sol](https://github.com/timou0911/Ethernat-Solution-and-Explanation
 ## Fhishing through `tx.origin`
 
 Let’s say we have a contract called Wallet and Bob staked his ether inside it. Here’s the code:
+
 ```Solidity
 contract Wallet {
     address public owner;
@@ -74,7 +75,7 @@ contract Attack {
 
 Here’s one possible hacking process:
 
-1. First of all, the attacker discovered that Bob is fascinated by crypto investment.
+1. First of all, the attacker discovered that Bob had a keen interest in cryptocurrency investments.
 
 2. The attacker sends a fake crypto-investing teaching website to Bob via email.
 
