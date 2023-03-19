@@ -18,5 +18,5 @@ Also, prior to version 0.4.22, a `constructor` is defined as a function with the
 
 ```js
 await contract.Fal1out() // call the wrong-spelled function to take ownership
-await contract.owner() === player // check if you're the owner now
+await contract.owner() === player // check if we're the owner now
 ```
