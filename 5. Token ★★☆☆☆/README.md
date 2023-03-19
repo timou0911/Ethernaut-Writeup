@@ -28,6 +28,6 @@ await contract.balanceOf(player).then(v => v.toString()) // check our balance no
 
 Prior to `v0.8.0`, the recommended best practice was to use [OpenZeppelin's SafeMath library](https://docs.openzeppelin.com/contracts/2.x/api/math), which includes functions such as `add(num1, num2)` that perform safer arithmetic operations. If the calculation would result in overflow or underflow, the transaction would be reverted.
 
-Starting from `v0.8.0`, Solidity automatically checks for these issues with a slightly higher gas cost and reverts the transaction if such problems occur.
+**Starting from `v0.8.0`, Solidity automatically checks for these issues with a slightly higher gas cost and reverts the transaction if such problems occur.**
 
-However, if a calculation is guaranteed to be 100% secure from overflow and underflow, you can wrap the code with an `unchecked` block, which instructs Solidity to skip the checks at that point.
+**However, if a calculation is guaranteed to be 100% secure from overflow and underflow, you can wrap the code with an `unchecked` block, which instructs Solidity to skip the checks at that point.**
