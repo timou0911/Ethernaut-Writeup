@@ -33,10 +33,10 @@ await contract.owner() === player // check if we're the owner now
 
 `call` and `delegatecall` are two low-level functions that are used to send messages to other contracts and execute functions in those contracts.
 
-When we use `call` in contract A to invoke a function in contract B, the function uses B’s context and changes the data in B. On the other hand, if we use `delegatecall` in contract A to invoke B’s function, it uses the context of A, modifying A’s data.
+**When we use `call` in contract A to invoke a function in contract B, the function uses B’s context and changes the data in B. On the other hand, if we use `delegatecall` in contract A to invoke B’s function, it uses the context of A, modifying A’s data.**
 
 Here’s a plot I made:
 
 <img width="821" alt="call v.s. delegatecall" src="https://user-images.githubusercontent.com/99255480/226260772-4d85d304-3ed6-4d7e-aca0-9f78a7a4bd3d.png">
 
-Usually, `call` is used to send ethers to other contracts, and `delegatecall` is most seen in proxy contracts. It is important to exercise caution when using `delegatecall`, as its misuse can potentially result in vulnerabilities in our contracts.
+Usually, `call` is used to send ethers to other contracts, and `delegatecall` is most seen in proxy contracts. **It is important to exercise caution when using `delegatecall`, as its misuse can potentially result in vulnerabilities in our contracts.**
