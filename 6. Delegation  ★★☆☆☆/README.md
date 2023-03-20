@@ -39,4 +39,4 @@ Here’s a plot I made:
 
 <img width="821" alt="call v.s. delegatecall" src="https://user-images.githubusercontent.com/99255480/226260772-4d85d304-3ed6-4d7e-aca0-9f78a7a4bd3d.png">
 
-Usually, `call` is used to send ethers to other contracts, and `delegatecall` is most seen in proxy contracts.
+Usually, `call` is used to send ethers to other contracts, and `delegatecall` is most seen in proxy contracts. It is important to exercise caution when using `delegatecall`, as its misuse can potentially result in vulnerabilities in our contracts.
