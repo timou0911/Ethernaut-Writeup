@@ -10,7 +10,7 @@
 
 ## Breakdown & Analysis
 
-1. In order for a contract to receive ethers, it will need to implement either `receive` or `payable fallback` function. Unfortunately, since the contract is empty, any `send` and `transfer` will be reverted.
+1. In order for a contract to receive ethers, it will need to implement either `receive` or `payable fallback` function. Unfortunately, since there's nothing but a kitten existing in the contract, any `send` and `transfer` will be reverted.
 
 2. However, there’s a way to forcibly transfer ethers to any contract — **due to the mechanism of `selfdestruct`, once it is called in a contract, it can forcibly send its contract balance to any other address, regardless of whether it has `receive` or `payable fallback` function or not.**
 
