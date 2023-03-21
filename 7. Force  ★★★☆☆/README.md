@@ -21,7 +21,7 @@
 See [Attack.sol](https://github.com/timou0911/Ethernat-Solution-and-Explanation/blob/main/7.%20Force%20%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
 
 ```js
-await getBalance(contract.address) // check the contract balance now.
+await getBalance(contract.address) // check the contract balance after calling `selfdestruct`.
 ```
 
 ## 
