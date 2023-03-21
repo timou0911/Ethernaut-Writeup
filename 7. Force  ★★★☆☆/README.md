@@ -24,4 +24,8 @@ See [Attack.sol](https://github.com/timou0911/Ethernat-Solution-and-Explanation/
 await getBalance(contract.address) // check the contract balance after calling `selfdestruct`.
 ```
 
-## 
+## `selfdestruct` Explanation
+
+`selfdestruct` is an interesting method in Solidity since it can “delete” the contract.
+
+After `selfdestruct` is called, the contract's data is cleared and the space it previously occupied in the current block is freed(more specifically, the current Merkle Patricia tree), making its bytecode inaccessible for future blocks, so that no one can interact with it anymore. Nonetheless, the contract itself remains on the blockchain, as its bytecode and data is still stored in previous blocks.
