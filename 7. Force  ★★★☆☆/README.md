@@ -39,3 +39,7 @@ After `selfdestruct` is called, the contract's data is cleared and the space it 
 2. **Similarly, when considering an investment opportunity, it's important to thoroughly evaluate whether the project manager or the contract owner has the ability to directly invoke `selfdestruct`. Additionally, it's essential to examine the designated receiver in the `selfdestruct` function. If the receiver is not specified or is an unverified address, it may be risky to invest money in it since investors could be rug pulled.**
 
 3. Never rely on `address(this).balance` since it can be altered easily.
+
+## Negative Gas
+
+Since it is beneficial to clean the code from the blockchain, programmers are encouraged by the Ethereum community to use `selfdestruct`. After calling it, half the total gas used is returned, and this is negative gas.
