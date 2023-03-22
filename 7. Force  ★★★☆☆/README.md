@@ -26,6 +26,16 @@ await getBalance(contract.address) // check the contract balance after calling `
 
 ## `selfdestruct` Explanation
 
-`selfdestruct` is an interesting method in Solidity since it can “delete” the contract.
+`selfdestruct` is an interesting method in Solidity since it can “delete” a contract.
 
-After `selfdestruct` is called, the contract's data is cleared and the space it previously occupied in the current block is freed(more specifically, the current Merkle Patricia tree), making its bytecode inaccessible for future blocks, so that no one can interact with it anymore. Nonetheless, the contract itself remains on the blockchain, as its bytecode and data is still stored in previous blocks.
+After `selfdestruct` is called, the contract's data is cleared and the space it previously occupied in the current block is freed(more specifically, the current Merkle Patricia tree), making its bytecode inaccessible for future blocks, so that no one can interact with it anymore. **Nonetheless, the contract itself remains on the blockchain, as its bytecode and data are still stored in previous blocks.**
+
+`selfdestruct` is a mechanism that allows the contract to be terminated under certain circumstances. **One common use case is to prevent further damage when the contract has been compromised by an attacker or has encountered a critical error. Also, selfdestruct is useful when updating the contract, developers can easily transfer the fund to the upgraded contract.**
+
+## Things to Evaluate When Auditing a Contract
+
+1. When writing a contract, remember to add conditions to make sure that `selfdestruct` won’t be called by anyone else.
+
+2. **Similarly, when considering an investment opportunity, it's important to thoroughly evaluate whether the project manager or the contract owner has the ability to directly invoke `selfdestruct`. Additionally, it's essential to examine the designated receiver in the `selfdestruct` function. If the receiver is not specified or is an unverified address, it may be risky to invest money in it since investors could be rug pulled.**
+
+3. Never rely on `address(this).balance` since it can be altered easily.
