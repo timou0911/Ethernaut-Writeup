@@ -28,5 +28,5 @@ await contract.unlock(password)
 await contract.locked() === false // check if the vault is open now
 ```
 
-## Explanation of Slot
+## Slot Explanation
 
