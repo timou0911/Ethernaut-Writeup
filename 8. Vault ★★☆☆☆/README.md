@@ -14,7 +14,7 @@
 
 1. The vault can only be unlocked by determining the correct value of `password`.
 
-2. As `password` is set to `private`, there is no getter function available, and other contracts, even those that inherit from it, cannot access its data.
+2. Since `password` is set to `private`, there is no getter function available, and other contracts, even those that inherit from it, cannot access its data.
 
 3. However, the primary purpose of visibility modifiers (`public`, `external`, `internal`, `private`) is to restrict access for other contracts and functions, but the data can still be viewed on the chain. It's also worth noting that `external` cannot be applied to state variables.
 
