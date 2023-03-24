@@ -16,9 +16,9 @@
 
 2. Since `password` is set to `private`, there is no getter function available, and other contracts, even those that inherit from it, cannot access its data.
 
-3. However, the primary purpose of visibility modifiers (`public`, `external`, `internal`, `private`) is to restrict access for other contracts and functions, but the data can still be viewed on the chain. It's also worth noting that `external` cannot be applied to state variables.
+3. However, **the primary purpose of visibility modifiers (`public`, `external`, `internal`, `private`) is to restrict access for other contracts and functions, but the data can still be viewed on the chain.** It's also worth noting that `external` cannot be applied to state variables.
 
-4. To retrieve a state variable's value on the chain, we must identify its storage slot. As `password` is the second variable declared, it occupies storage slot 1. To access its value, we can utilize the web3.js method: `web3.eth.getStorageAt(address, position)`.
+4. **To retrieve a state variable's value on the chain, we must identify its storage slot.** As `password` is the second variable declared, it occupies storage slot 1. To access its value, we can utilize the web3.js method: `web3.eth.getStorageAt(address, position)`.
 
 ## Detailed Steps
 
