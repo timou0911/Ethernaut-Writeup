@@ -41,21 +41,23 @@ contract GetSlotValue {
 
     uint256 v1 = 111;
     uint256 v2 = 222;
-    uint32 v3 = 333;
-    uint32 v4 = 444;
-    uint64 v5 = 555;
-    uint128 v6 = 666;
-    uint8 v7 = 12;
-    address v8 = 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005;
+    uint8 v3 = 12;
+    address v4 = 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005;
+    uint128 v5 = 555;
+    uint64 v6 = 666;
+    uint32 v7 = 777;
+    uint32 v8 = 888;
 
     function getValueFromSlot (uint256 i) public view returns (bytes32 data) { 
         assembly {
-            data := sload(i) // get hex by slot
+            data := sload(i)
         }
     }
 }
 ```
 
 * if I call `getValueFromSlot(0)`, it will return `0x000000000000000000000000000000000000000000000000000000000000006f`, which is 111 in hex.
-* Calling `getValueFromSlot(2)`, it returns `0x0000000000000000000000000000029a000000000000022b000001bc0000014d`, which contains v6(`0000014d`), v5(`000001bc`), v4(`000000000000022b`), and v3(`0000000000000000000000000000029a`), representing in little endian form(right to left). The four occupy exactly 32 bytes so they are packed into the third slot.
-* Lastly, `getValueFromSlot(3)` will return `0x0000000000000000000000d2a5bc10698fd955d1fe6cb468a17809a08fd0050c`, which consists an address v8 and `uint8` v7(`0c`).
+* 
+* Calling `getValueFromSlot(2)` returns `0x0000000000000000000000d2a5bc10698fd955d1fe6cb468a17809a08fd0050c`, which contains v3(`0c`) and an address v4. Since the remaining space can’t fit in v5, it will be stored in the next slot.
+
+* Lastly, `getValueFromSlot(3)` will return `0x0000037800000309000000000000029a0000000000000000000000000000022b`, which consists v5(`0x00000378`), v6(`0x00000309`), v7(`0x000000000000029a`), and v8(`0x0000000000000000000000000000022b`), representing in little endian form(right to left). The four occupy exactly 32 bytes so they are packed into the fourth slot.
