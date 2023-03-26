@@ -39,7 +39,7 @@ For example, consider such code:
 ```Solidity
 contract GetSlotValue {
 
-	uint256 v1 = 111; // 32 bytes
+    uint256 v1 = 111; // 32 bytes
     uint256 v2 = 222; // 32 bytes
     uint8 v3 = 12; // 1 bytes
     address v4 = 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005; // 20 bytes
