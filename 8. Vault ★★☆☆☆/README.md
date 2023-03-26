@@ -32,7 +32,7 @@ await contract.locked() === false // check if the vault is open now
 
 In Solidity, state variables are stored in storage, which is divided into fixed-size slots of 32 bytes each. Each slot has a unique key starting from 0, and subsequent slots are numbered sequentially from 1, 2, 3, and so on.
 
-When a state variable is declared, it is assigned to a slot in storage. If the state variable is of a fixed-size type, such as `uint` or `bool`, then it will take up a single slot and use the necessary bytes (data are encoded into hex in storage). However, it is possible for multiple state variables to be packed into a single storage slot if their total size is less than or equal to 32 bytes. 
+When a state variable is declared, it is assigned to a slot in storage. If the state variable is of a fixed-size type, such as `uint` or `bool`, then it will take up a single slot and use the necessary bytes (data are encoded into hex then saved to slots). However, it is possible for multiple state variables to be packed into a single storage slot if their total size is less than or equal to 32 bytes. 
 
 For example, consider such code:
 
