@@ -39,24 +39,26 @@ For example, consider such code:
 ```Solidity
 contract GetSlotValue {
 
-    uint256 v1 = 111;
-    uint256 v2 = 222;
-    uint8 v3 = 12;
-    address v4 = 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005;
-    uint128 v5 = 555;
-    uint64 v6 = 666;
-    uint32 v7 = 777;
-    uint32 v8 = 888;
+	uint256 v1 = 111; // 32 bytes
+    uint256 v2 = 222; // 32 bytes
+    uint8 v3 = 12; // 1 bytes
+    address v4 = 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005; // 20 bytes
+    uint128 v5 = 555; // 16 bytes
+    uint64 v6 = 666; // 8 bytes
+    uint32 v7 = 777; // 4 bytes
+    uint32 v8 = 888; // 4 bytes
 
     function getValueFromSlot (uint256 i) public view returns (bytes32 data) { 
         assembly {
-            data := sload(i)
+            data := sload(i) // retrieve data from a slot
         }
     }
 }
 ```
 
 * if I call `getValueFromSlot(0)`, it will return `0x000000000000000000000000000000000000000000000000000000000000006f`, which is 111 in hex.
+
+* Similar to slot 0, slot 1 stores v2 in hex.
 
 * Calling `getValueFromSlot(2)` returns `0x0000000000000000000000d2a5bc10698fd955d1fe6cb468a17809a08fd0050c`, which contains v3(`0x0c`) and an address v4. Since the remaining space can’t fit in v5, it will be stored in the next slot.
 
