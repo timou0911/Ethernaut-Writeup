@@ -57,7 +57,7 @@ contract GetSlotValue {
 ```
 
 * if I call `getValueFromSlot(0)`, it will return `0x000000000000000000000000000000000000000000000000000000000000006f`, which is 111 in hex.
-* 
-* Calling `getValueFromSlot(2)` returns `0x0000000000000000000000d2a5bc10698fd955d1fe6cb468a17809a08fd0050c`, which contains v3(`0c`) and an address v4. Since the remaining space can’t fit in v5, it will be stored in the next slot.
+
+* Calling `getValueFromSlot(2)` returns `0x0000000000000000000000d2a5bc10698fd955d1fe6cb468a17809a08fd0050c`, which contains v3(`0x0c`) and an address v4. Since the remaining space can’t fit in v5, it will be stored in the next slot.
 
 * Lastly, `getValueFromSlot(3)` will return `0x0000037800000309000000000000029a0000000000000000000000000000022b`, which consists v5(`0x00000378`), v6(`0x00000309`), v7(`0x000000000000029a`), and v8(`0x0000000000000000000000000000022b`), representing in little endian form(right to left). The four occupy exactly 32 bytes so they are packed into the fourth slot.
