@@ -56,7 +56,7 @@ contract GetSlotValue {
 }
 ```
 
-* if I call `getValueFromSlot(0)`, it will return `0x000000000000000000000000000000000000000000000000000000000000006f`, which is 111 in hex.
+* if we call `getValueFromSlot(0)`, it will return `0x000000000000000000000000000000000000000000000000000000000000006f`, which is 111 in hex.
 
 * Similar to slot 0, slot 1 stores v2 in hex.
 
