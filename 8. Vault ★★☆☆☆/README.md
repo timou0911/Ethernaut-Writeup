@@ -78,7 +78,7 @@ contract GetSlotValue2 {
     }
 
     function getMappingSlot (uint256 key, uint256 mappingSlot) public pure returns (uint256 slot) { // get the item's slot
-        // in a mapping, the element'slot is determined by the slot storing the mapping itself and the element's key
+        // in a mapping, the element's slot is determined by the slot storing the mapping itself and the element's key
         slot = uint256(keccak256(abi.encode(key, mappingSlot)));
     }
 
