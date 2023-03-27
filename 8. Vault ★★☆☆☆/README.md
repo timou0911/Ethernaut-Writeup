@@ -63,3 +63,30 @@ contract GetSlotValue {
 * Calling `getValueFromSlot(2)` returns `0x0000000000000000000000d2a5bc10698fd955d1fe6cb468a17809a08fd0050c`, which contains v3(`0x0c`) and an address v4. Since the remaining space can’t fit in v5, it will be stored in the next slot.
 
 * Lastly, `getValueFromSlot(3)` will return `0x0000037800000309000000000000029a0000000000000000000000000000022b`, which consists v5(`0x00000378`), v6(`0x00000309`), v7(`0x000000000000029a`), and v8(`0x0000000000000000000000000000022b`), representing in little endian form(right to left). The four occupy exactly 32 bytes so they are packed into the fourth slot.
+
+For mappings, the process is slightly different. Since mappings are dynamic, storing elements in contiguous slots is unrealistic. Instead, there will be a slot reserved for storing the mapping itself, while the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping. 
+
+For instance:
+
+```Solidity
+contract GetSlotValue2 {
+    uint256 v1 = 111;
+    mapping(uint256 => uint256) m; // if we call getValueFromSLot(1), it returns 0x000..., but is still stores the mapping itself
+
+    function addItem (uint256 key, uint256 value) public { // adding mapping item
+        m[key] = value;
+    }
+
+    function getMappingSlot (uint256 key, uint256 mappingSlot) public pure returns (uint256 slot) { // get the item's slot
+        // in a mapping, the element'slot is determined by the slot storing the mapping itself and the element's key
+        slot = uint256(keccak256(abi.encode(key, mappingSlot)));
+    }
+
+    function getValueFromSLot (uint256 i) public view returns (uint256 data) {
+        assembly {
+            data := sload(i)
+        }
+    }
+}
+```
+
