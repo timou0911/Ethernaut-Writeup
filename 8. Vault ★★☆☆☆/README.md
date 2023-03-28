@@ -98,7 +98,7 @@ contract GetSlotValue2 {
     
     * then convert the encoded number into a hash using `keccak256`
     
-    * lastly, we cast the hash result into `uint256`
+    * lastly, we cast the hash result into `uint256`.
     
     In this case, `m[2]` is stored in slot `98521912898304110675870976153671229506380941016514884467413255631823579132687`.
 
