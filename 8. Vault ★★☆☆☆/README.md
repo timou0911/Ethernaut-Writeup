@@ -90,3 +90,18 @@ contract GetSlotValue2 {
 }
 ```
 
+* Slot 0 stores v1’s value in hex, and slot 1 stores the mapping m itself.
+
+* The element of a mapping is determined by the hash function, which encodes the key and the mapping's slot together. For instance, to determine which slot stores `m[2]`, 
+
+    * first encode 2 (the index) and 1 (the mapping's slot)
+    
+    * then convert the encoded number into a hash using `keccak256`
+    
+    * lastly, we cast the hash result into `uint256`
+    
+    In this case, `m[2]` is stored in slot `98521912898304110675870976153671229506380941016514884467413255631823579132687`.
+
+    Although this number may seem extensive, there are `2^256 - 1` slots available for a contract, so the probability of two elements sharing the same slot (hash collision) is minimal.
+
+Similarly, nested mappings are applied with the same method.
