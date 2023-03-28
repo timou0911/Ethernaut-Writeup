@@ -109,3 +109,6 @@ contract GetSlotValue2 {
     Although this number may seem extensive, there are `2^256 - 1` slots available for a contract, so the probability of two elements sharing the same slot (hash collision) is minimal.
 
 Similarly, nested mappings are applied with the same method.
+
+### Structs
+
