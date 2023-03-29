@@ -122,9 +122,11 @@ contract GetSlotValue2 {
 
 Similarly, nested mappings are applied with the same method.
 
-### Structs
+### Structs & Static Arrays
 
 Similar to the fixed-size types mentioned previously, a struct will occupy storage slots based on its members. We can optimize storage usage by rearranging the position of the members. For example, instead of declaring members like `S1`, `S2` is a better practice.
+
+Also, if there are any unused bytes in a struct, the subsequent variable will not be stored in the same slot.
 
 ```Solidity
 S1 {
@@ -142,4 +144,6 @@ S2 {
 }
 ```
 
-### Arrays
+Static arrays behave similarly to structs in this respects.
+
+### Dynamic Arrays
