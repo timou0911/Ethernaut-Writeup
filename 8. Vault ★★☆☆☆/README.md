@@ -100,7 +100,7 @@ S2 {
 }
 ```
 
-Static arrays behave similarly to structs in this respects.
+Static arrays behave similarly to structs in this respect.
 
 
 ### Mappings
