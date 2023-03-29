@@ -124,3 +124,22 @@ Similarly, nested mappings are applied with the same method.
 
 ### Structs
 
+Similar to the fixed-size types mentioned previously, a struct will occupy storage slots based on its members. We can optimize storage usage by rearranging the position of the members. For example, instead of declaring members like `S1`, `S2` is a better practice.
+
+```Solidity
+S1 {
+    uint256 date; // slot 0
+	uint128 id; // slot 1
+	uint256 grade; // slot 2
+	uint128 time; // slot 3
+}
+
+S2 {
+	uint256 date; // slot 0
+	uint256 time; // slot 1
+	uint128 grade; // slot 2
+	uint128 id; // slot 2
+}
+```
+
+### array
