@@ -129,17 +129,17 @@ Similar to the fixed-size types mentioned previously, a struct will occupy stora
 ```Solidity
 S1 {
     uint256 date; // slot 0
-	uint128 id; // slot 1
-	uint256 grade; // slot 2
-	uint128 time; // slot 3
+    uint128 id; // slot 1
+    uint256 grade; // slot 2
+    uint128 time; // slot 3
 }
 
 S2 {
-	uint256 date; // slot 0
-	uint256 time; // slot 1
-	uint128 grade; // slot 2
-	uint128 id; // slot 2
+    uint256 date; // slot 0
+    uint256 time; // slot 1
+    uint128 grade; // slot 2
+    uint128 id; // slot 2
 }
 ```
 
-### array
+### Arrays
