@@ -78,6 +78,31 @@ contract GetSlotValue {
 
 * Lastly, `getValueFromSlot(3)` will return `0x0000037800000309000000000000029a0000000000000000000000000000022b`, which consists v5(`0x00000378`), v6(`0x00000309`), v7(`0x000000000000029a`), and v8(`0x0000000000000000000000000000022b`), representing in little endian form(right to left). The four occupy exactly 32 bytes so they are packed into the fourth slot.
 
+### Structs & Static Arrays
+
+Similar to the fixed-size types mentioned previously, a struct will occupy storage slots based on its members. We can optimize storage usage by rearranging the position of the members. For example, instead of declaring members like `S1`, `S2` is a better practice.
+
+Also, if there are any unused bytes in a struct, the subsequent variable will not be stored in the same slot.
+
+```Solidity
+S1 {
+    uint256 date; // slot 0
+    uint128 id; // slot 1
+    uint256 grade; // slot 2
+    uint128 time; // slot 3
+}
+
+S2 {
+    uint256 date; // slot 0
+    uint256 time; // slot 1
+    uint128 grade; // slot 2
+    uint128 id; // slot 2
+}
+```
+
+Static arrays behave similarly to structs in this respects.
+
+
 ### Mappings
 
 For mappings, the process is slightly different. Since mappings are dynamic, storing elements in contiguous slots is unrealistic. Instead, there will be a slot reserved for storing the mapping itself, while the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping. 
@@ -121,29 +146,5 @@ contract GetSlotValue2 {
     Although this number may seem extensive, there are `2^256 - 1` slots available for a contract, so the probability of two elements sharing the same slot (hash collision) is minimal.
 
 Similarly, nested mappings are applied with the same method.
-
-### Structs & Static Arrays
-
-Similar to the fixed-size types mentioned previously, a struct will occupy storage slots based on its members. We can optimize storage usage by rearranging the position of the members. For example, instead of declaring members like `S1`, `S2` is a better practice.
-
-Also, if there are any unused bytes in a struct, the subsequent variable will not be stored in the same slot.
-
-```Solidity
-S1 {
-    uint256 date; // slot 0
-    uint128 id; // slot 1
-    uint256 grade; // slot 2
-    uint128 time; // slot 3
-}
-
-S2 {
-    uint256 date; // slot 0
-    uint256 time; // slot 1
-    uint128 grade; // slot 2
-    uint128 id; // slot 2
-}
-```
-
-Static arrays behave similarly to structs in this respects.
 
 ### Dynamic Arrays
