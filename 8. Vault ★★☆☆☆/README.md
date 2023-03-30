@@ -122,7 +122,7 @@ contract GetDynamicArrayElementSlot {
         arr2.push(11);
         arr2.push(12);
         arr2.push(13);
-        arr2.push(14);
+        arr2.push(14); // 11, 12, 13, 14 will be stored in the same slot
     }
 
     function arr1Push(uint256 index, uint256 num) public {
