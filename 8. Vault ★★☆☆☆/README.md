@@ -112,7 +112,7 @@ For instance, suppose that `m[1] = 10`, `m[2] = 20`, `m[3] = 40` are already dec
 ```Solidity
 contract GetSlotValue2 {
     uint256 v1 = 111;
-    mapping(uint256 => uint256) m; // marker slot, which marks that this mapping exists, but it won't store the variable's data
+    mapping(uint256 => uint256) m; // slot 1 is a marker slot which marks that this mapping exists, but it won't store the variable's data
 
     function addElement (uint256 key, uint256 value) public { // adding mapping item
         m[key] = value;
