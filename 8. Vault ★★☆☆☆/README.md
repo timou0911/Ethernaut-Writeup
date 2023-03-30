@@ -51,7 +51,7 @@ When a state variable is declared, it is assigned to a slot in storage. If the s
 For example, consider such code:
 
 ```Solidity
-contract GetSlotValue {
+contract GetFixedSizeTypeSlot {
 
     uint256 v1 = 111; // 32 bytes
     uint256 v2 = 222; // 32 bytes
@@ -113,20 +113,20 @@ For mappings, the process of accessing an element is slightly different from tha
 For instance, suppose that `m[1] = 10`, `m[2] = 20`, `m[3] = 40` are already declared using `addElement`.
 
 ```Solidity
-contract GetSlotValue2 {
+contract GetMappingElementSlot {
     uint256 v1 = 111;
-    mapping(uint256 => uint256) m; // slot 1 is a marker slot which marks that this mapping exists, but it won't store the variable's data
+    mapping(uint256 => uint256) m; // if we call slot 1, it returns 0x000..., but is still stores the mapping itself
 
-    function addElement (uint256 key, uint256 value) public { // adding mapping item
+    function addElement (uint256 key, uint256 value) public { // adding mapping element
         m[key] = value;
     }
 
-    function getMappingSlot (uint256 key, uint256 mappingSlot) public pure returns (uint256 slot) { // get the item's slot
-        // in a mapping, the element's slot is determined by the slot storing the mapping itself and the element's key
+    function getElementSlot (uint256 key, uint256 mappingSlot) public pure returns (uint256 slot) { // get the element's slot
+        // in mappings, the element'slot is determined by the slot storing the mapping itself and the element's key
         slot = uint256(keccak256(abi.encode(key, mappingSlot)));
     }
 
-    function getValueFromSLot (uint256 i) public view returns (uint256 data) {
+    function getValueFromSlot (uint256 i) public view returns (uint256 data) {
         assembly {
             data := sload(i)
         }
