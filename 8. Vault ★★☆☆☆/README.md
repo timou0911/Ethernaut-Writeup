@@ -44,9 +44,9 @@ In Solidity, state variables are stored in storage, which is divided into fixed-
 | bool | 1 bytes |
 | bytes1 ~ bytes32 | 1 byte ~ 32 bytes |
 
-### Fixed-size Data Types
+### Statically-size Type
 
-When a state variable is declared, it is assigned to a slot in storage. If the state variable is of a fixed-size type, such as `uint` or `bool`, then it will take up a single slot and use the necessary bytes (data are encoded into hex then saved to slots). However, it is possible for multiple state variables to be packed into a single storage slot if their total size is less than or equal to 32 bytes. 
+When a state variable is declared, it is assigned to a slot in storage. If the state variable is of a statically-size type, such as `uint` or `bool`, then it will take up a single slot and use the necessary bytes (data are encoded into hex then saved to slots). However, it is possible for multiple state variables to be packed into a single storage slot if their total size is less than or equal to 32 bytes. 
 
 For example, consider such code:
 
@@ -80,7 +80,7 @@ contract GetSlotValue {
 
 ### Structs & Static Arrays
 
-Similar to the fixed-size types mentioned previously, a struct will occupy storage slots based on its members. We can optimize storage usage by rearranging the position of the members. For example, instead of declaring members like `S1`, `S2` is a better practice.
+Similar to the statically-size types mentioned previously, a struct will occupy storage slots based on its members. We can optimize storage usage by rearranging the position of the members. For example, instead of declaring members like `S1`, `S2` is a better practice.
 
 Also, if there are any unused bytes in a struct, the subsequent variable will not be stored in the same slot.
 
