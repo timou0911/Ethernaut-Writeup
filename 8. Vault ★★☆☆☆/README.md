@@ -106,21 +106,23 @@ Static arrays behave similarly to structs in this respect.
 
 ### Dynamic Arrays
 
-Similar to dynamic arrays, a mapping is stored in a marker slot. However, the process of accessing an element is different since the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping.
+Given that the length of a dynamic array can be modified, it is impractical to store its data in the same way as fixed-size types. Rather, a marker slot is used to store the array's length, and the slot of the first element is determined by hashing the marker slot's number. The following elements are subsequently stored after it. Also, like static arrays, it's possible to store multiple elements in the same slot of a dynamic array if the total bytes of the elements are less than or equal to 32.
 
-For example,
+For example:
 
 ```Solidity
 contract GetDynamicArrayElementSlot {
-    uint256[] arr1; // slot 0 is a marker slot storing arr1's length
-    uint8[] arr2; // slot 1 is a marker slot storing arr2's length
+    uint256[] arr1;
+    uint8[] arr2;
 
     constructor() {
         arr1.push(1);
         arr1.push(2);
+        arr1.push(3);
         arr2.push(11);
         arr2.push(12);
         arr2.push(13);
+        arr2.push(14);
     }
 
     function arr1Push(uint256 index, uint256 num) public {
@@ -131,20 +133,14 @@ contract GetDynamicArrayElementSlot {
         arr2[index] = num;
     }
 
-    function getElementSlot(uint256 arraySlot, uint256 index) public pure returns (uint256 slot) {
+    function getFirstElementFromSlot(uint256 arraySlot) public view returns (bytes32 data) {
         uint256 hashedArraySlot = uint256(keccak256(abi.encode(arraySlot)));
-        slot = hashedArraySlot + index;
-    }
-
-    function getValueFromSlot(uint256 i) public view returns (bytes32 data) {
         assembly {
-            data := sload(i)
+            data := sload(hashedArraySlot) // return the first element
         }
     }
 }
 ```
-
-Like static arrays, it's possible to store multiple elements in the same slot of a dynamic array if the total bytes of the elements are less than or equal to 32.
 
 ### Mappings
 
