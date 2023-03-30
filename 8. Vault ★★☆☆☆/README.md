@@ -105,14 +105,14 @@ Static arrays behave similarly to structs in this respect.
 
 ### Mappings
 
-For mappings, the process is slightly different. Since mappings are dynamic, storing elements in contiguous slots is unrealistic. Instead, there will be a slot reserved for storing the mapping itself, while the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping. 
+For mappings, the process is slightly different. Since mappings are dynamic, storing elements in contiguous slots is unrealistic. Instead, there will be a slot reserved for storing the mapping itself(marker slot), while the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping. 
 
 For instance, suppose that `m[1] = 10`, `m[2] = 20`, `m[3] = 40` are already declared using `addElement`.
 
 ```Solidity
 contract GetSlotValue2 {
     uint256 v1 = 111;
-    mapping(uint256 => uint256) m; // if we call getValueFromSLot(1), it returns 0x000..., but is still stores the mapping itself
+    mapping(uint256 => uint256) m; // marker slot, which marks that this mapping exists, but it won't store the variable's data
 
     function addElement (uint256 key, uint256 value) public { // adding mapping item
         m[key] = value;
