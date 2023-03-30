@@ -104,7 +104,7 @@ Static arrays behave similarly to structs in this respect.
 
 ### Dynamic Arrays
 
-Given that the length of a dynamic array can be modified, it is impractical to store its data in the same way as fixed-size types. Rather, a marker slot is used to store the array's length, and the slot of the first element is determined by hashing the marker slot's number. The following elements are subsequently stored after it.
+Similar to dynamic arrays, a mapping is stored in a marker slot. However, the process of accessing an element is different since the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping.
 
 For example,
 
