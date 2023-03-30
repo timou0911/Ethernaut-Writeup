@@ -153,7 +153,7 @@ For instance, suppose that `m[1] = 10`, `m[2] = 20`, `m[3] = 40` are already dec
 ```Solidity
 contract GetMappingElementSlot {
     uint256 v1 = 111;
-    mapping(uint256 => uint256) m; // if we call slot 1, it returns 0x000..., but is still stores the mapping itself
+    mapping(uint256 => uint256) m; // if we call slot 1(marker slot of the mapping), it returns 0x000..., but it still stores the mapping itself
 
     function addElement (uint256 key, uint256 value) public { // adding mapping element
         m[key] = value;
