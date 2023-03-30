@@ -102,10 +102,13 @@ S2 {
 
 Static arrays behave similarly to structs in this respect.
 
+### Dynamic Arrays
+
+
 
 ### Mappings
 
-For mappings, the process is slightly different. Since mappings are dynamic, storing elements in contiguous slots is unrealistic. Instead, there will be a slot reserved for storing the mapping itself(marker slot), while the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping. 
+For mappings, the process of accessing an element is slightly different from that of accessing a dynamic array. Since mappings are dynamic, storing elements in contiguous slots is unrealistic. Instead, there will be a slot reserved for storing the mapping itself(marker slot), while the elements are stored separately in slots determined by their corresponding keys and the slot storing the mapping. 
 
 For instance, suppose that `m[1] = 10`, `m[2] = 20`, `m[3] = 40` are already declared using `addElement`.
 
@@ -146,5 +149,3 @@ contract GetSlotValue2 {
     Although this number may seem extensive, there are `2^256 - 1` slots available for a contract, so the probability of two elements sharing the same slot (hash collision) is minimal.
 
 Similarly, nested mappings are applied with the same method.
-
-### Dynamic Arrays
