@@ -46,7 +46,7 @@ In Solidity, state variables are stored in storage, which is divided into fixed-
 
 ### Statically-size Type
 
-When a state variable is declared, it is assigned to a slot in storage. If the state variable is of a statically-size type, such as `uint` or `bool`, then it will take up a single slot and use the necessary bytes (data are encoded into hex then saved to slots). However, it is possible for multiple state variables to be packed into a single storage slot if their total size is less than or equal to 32 bytes. 
+When a state variable is declared, it is assigned to a slot in storage. If the state variable is of a statically-size type, such as `uint` or `bool`, then it will take up a single slot and use the necessary bytes (data are encoded into hex then saved to slots). However, multiple state variables can be packed into a single storage slot if their total size is less than or equal to 32 bytes. 
 
 For example, consider such code:
 
