@@ -2,11 +2,11 @@
 
 ## Concepts
 
-1. Take the kingship and avoid being taken when submitting the instance. (the level will try to reclaim it)
+
 
 ## Level Target
 
-
+1. Take the kingship and avoid being taken when submitting the instance. (the level will try to reclaim it)
 
 ## Breakdown & Analysis
 
