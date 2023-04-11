@@ -14,7 +14,7 @@
 
 ## Detailed Steps
 
-See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation/blob/main/9.%20King%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol)
+See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation/blob/main/9.%20King%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
 
 ```js
 await contract.prize().then(v => fromWei(v).toString()) // check the prize required to take the kingship
