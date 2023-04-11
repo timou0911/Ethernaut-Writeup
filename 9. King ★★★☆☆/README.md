@@ -2,7 +2,8 @@
 
 ## Concepts
 
-
+1. Three methods to send ether to other contracts. (`transfer()`, `send()`, and `call()`)
+2. `receive()` function.
 
 ## Level Target
 
