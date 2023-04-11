@@ -13,3 +13,10 @@
 
 
 ## Detailed Steps
+
+
+
+```js
+await contract.prize().then(v => fromWei(v).toString()) // check the prize required to take the kingship
+await contract._king() // check if kingship has been taken
+```
