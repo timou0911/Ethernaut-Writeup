@@ -11,7 +11,9 @@
 
 ## Breakdown & Analysis
 
+1. In order to claim the kingship, we will need to call `receive` with ether equal or more than the current prize. 
 
+2. To ensure that the kingship cannot be taken when submitting the instance, we need a contract without implementing `fallback` and `receive`, so all we need is a contract that has a function to call `receive`.
 
 ## Detailed Steps
 
