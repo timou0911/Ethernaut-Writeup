@@ -15,6 +15,8 @@
 
 2. To ensure that the kingship cannot be taken when submitting the instance, we need a contract without implementing `fallback` and `receive`, so all we need is a contract that has a function to call `receive`.
 
+3. It's important to note that neither send nor transfer will work in this scenario, as the operation in receive costs more than the 2300 gas limit imposed on both methods.
+
 ## Detailed Steps
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation/blob/main/9.%20King%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
