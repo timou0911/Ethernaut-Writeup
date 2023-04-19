@@ -26,3 +26,13 @@ await contract.prize().then(v => fromWei(v).toString()) // check the prize requi
 await contract._king() // check if kingship has been taken
 ```
 ## Three Methods to Send Ethers: `send`, `transfer`, & `call`
+
+### `send`
+
+
+
+### `transfer`
+
+
+### `call`
+
