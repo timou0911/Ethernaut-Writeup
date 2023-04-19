@@ -25,3 +25,4 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation
 await contract.prize().then(v => fromWei(v).toString()) // check the prize required to take the kingship
 await contract._king() // check if kingship has been taken
 ```
+## Three Methods to Send Ethers: `send`, `transfer`, & `call`
