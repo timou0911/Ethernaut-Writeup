@@ -29,10 +29,33 @@ await contract._king() // check if kingship has been taken
 
 ### `send`
 
+1. This method has a gas limit of 2300 gas, which means that `receive` or `fallback` in the receiver contract can’t implement complicated operatioln.
 
+2. It won’t `revert` if the transection fails.
+
+3. It has a boolean return value that indicates whether the transection was successful or not.
+
+```Solidity
+function Send(address payable to, uint256 amount) external payable {
+	bool success = to.send(amount);
+  // since `send` won't revert the tx automatically, further code is usually necessary to handle the result
+	if (!success) {
+        revert SendFailed();
+    }
+}
+```
 
 ### `transfer`
 
+1. This method has a gas limit of 2300 gas, which means that `receive` or `fallback` in the receiver contract can’t implement complicated operatioln.
+
+2. Automatically `revert` if the transection fails.
+
+```Solidity
+function Transfer(address payable to, uint amount) external payable {
+	to.transfer(amount);
+}
+```
 
 ### `call`
 
