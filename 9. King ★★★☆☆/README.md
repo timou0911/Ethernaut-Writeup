@@ -59,3 +59,14 @@ function Transfer(address payable to, uint amount) external payable {
 
 ### `call`
 
+1. This method allows users to customize the gas limit and enables support for `receive` or `fallback` in the receiver contract to implements complicated operations.
+
+2. It won’t `revert` if the transaction fails.
+
+3. It has two return values:
+
+    1. `bool success`: indicates whether the transaction was successful or not.
+    
+    2. `bytes memory data`: the return value of called function.
+
+4. Users use `call` to invoke functions in another contract and send ethers along with it, even without knowledge of its ABI.
