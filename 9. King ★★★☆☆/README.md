@@ -40,8 +40,8 @@ function Send(address payable to, uint256 amount) external payable {
 	bool success = to.send(amount);
   // since `send` won't revert the tx automatically, further code is usually necessary to handle the result
 	if (!success) {
-        revert SendFailed();
-    }
+        	revert SendFailed();
+    	}
 }
 ```
 
