@@ -70,3 +70,12 @@ function Transfer(address payable to, uint amount) external payable {
     2. `bytes memory data`: the return value of called function.
 
 4. Users use `call` to invoke functions in another contract and send ethers along with it, even without knowledge of its ABI.
+
+```Solidity
+// use call to send ethers to another contract
+function sendEtherViaCall(address payable _to) public payable {
+     // returns two values
+    (bool success, bytes memory data) = _to.call{value: msg.value}("");
+    require(success, "Failed");
+}
+```
