@@ -73,14 +73,17 @@ function Transfer(address payable to, uint amount) external payable {
 
 ```Solidity
 // use call to send ethers to another contract
-function sendEtherViaCall(address payable _to) public payable {
+function sendEtherViaCall(address payable to) public payable {
      	// returns two values
-   	(bool success, bytes memory data) = _to.call{value: msg.value}("");
-    	require(success, "Failed");
+   	(bool success, bytes memory data) = to.call{value: msg.value}("");
+    	require(success, "Tx Failed");
 }
 
 // use call to invoke functions in another contract
-function invokeFunction(address payable _to) public payable {
-	
+function invokeFunction(address payable to, uint256 value) public payable {
+	(bool success, bytes memory data) = to.call{value: msg.value}(
+		abi.encodeWithSignature("changeValue(uint256)", value)
+	);
+	require(success, "Tx Failed");
 }
 ```
