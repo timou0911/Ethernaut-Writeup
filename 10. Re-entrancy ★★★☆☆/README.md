@@ -2,11 +2,12 @@
 
 ## Concept
 
-
+1. Re-entrancy attack.
+2. `receive()` function.
 
 ## Level Target
 
-
+1. Steal all the funds from the contract.
 
 ## Breakdown & Analysis
 
@@ -14,3 +15,4 @@
 
 ## Detailed Steps
 
+See Attack.sol.
