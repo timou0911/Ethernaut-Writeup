@@ -15,4 +15,6 @@
 
 ## Detailed Steps
 
-See Attack.sol.
+See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation/blob/main/10.%20Re-entrancy%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
+
+## How to Avoid Re-entrancy
