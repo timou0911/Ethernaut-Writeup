@@ -20,7 +20,7 @@
 
 4. **To retrieve a state variable's value on the chain, we must identify its storage slot.** As `password` is the second variable declared, it occupies storage slot 1. To access its value, we can utilize the web3.js method: `web3.eth.getStorageAt(address, position)`.
 
-> Marking a variable as private only prevents other contracts from accessing it. However, it is important to note that the data is still visible on the blockchain. Therefore, if sensitive data needs to be stored on the blockchain, it should be encrypted first, and the decryption key should not be uploaded on-chain to ensure the data remains secure. [zk-SNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell) can be used to verify whether an entity possesses a decryption key without revealing the key itself. This can be useful in cases where sensitive data is stored on the blockchain and needs to be kept private.
+> Marking a variable as `private` only prevents other contracts from accessing it. However, it is important to note that the data is still visible on the blockchain. Therefore, if sensitive data needs to be stored on the blockchain, it should be encrypted first, and the decryption key should not be uploaded on-chain to ensure the data remains secure. [zk-SNARKs](https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell) can be used to verify whether an entity possesses a decryption key without revealing the key itself. This can be useful in cases where sensitive data is stored on the blockchain and needs to be kept private.
 
 ## Detailed Steps
 
