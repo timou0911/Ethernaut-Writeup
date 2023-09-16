@@ -1,5 +1,9 @@
 [Level 1. Fallback](https://ethernaut.openzeppelin.com/level/0x3c34A342b2aF5e885FcaA3800dB5B205fEfa3ffB)
 
+## In A Nutshell
+
+> Be aware of the lines that change states, and who has access to them.
+
 ## Concepts
 
 1. The basis of coding logic.
@@ -22,7 +26,7 @@
 
 1. Two ways to take ownership. (we can’t get access to the `constructor` since it’s not included in the contract bytecode)
 
-    1. Contribute more eth than `owner` does → unrealistic, you can’t contribute more than 0.001 ether at one transaction, plus the owner already has 1000 ethers of contribution when the contract is built. (unfair, right?)
+    1. Contribute more ether than `owner` does → unrealistic, you can’t contribute more than 0.001 ether at one transaction, plus the owner already has 1000 ethers of contribution when the contract is built. (unfair, right?)
     
     2. So the other way to hack the contract is from `receive` function, in order to call `receive`, you’ll need to satisfy two conditions.
     
