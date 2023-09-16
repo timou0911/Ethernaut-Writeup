@@ -1,5 +1,9 @@
 [Level 6. Delegation](https://ethernaut.openzeppelin.com/level/0x73379d8B82Fda494ee59555f333DF7D44483fD58)
 
+## In A Nutshell
+
+> `delegatecall` takes the address that calls it as `msg.sender`.
+
 ## Concepts
 
 1. The understanding of `delegatecall`.
