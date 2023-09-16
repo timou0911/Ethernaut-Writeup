@@ -1,5 +1,9 @@
 [Level 9. King](https://ethernaut.openzeppelin.com/level/0x3049C00639E6dfC269ED1451764a046f7aE500c6)
 
+## In A Nutshell
+
+> A contract without `fallback()` and `receive()` implemented can't receive any ether.
+
 ## Concepts
 
 1. Three methods to send ether to other contracts. (`transfer()`, `send()`, and `call()`)
