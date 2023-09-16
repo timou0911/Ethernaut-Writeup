@@ -1,5 +1,9 @@
 [Level 7. Force](https://ethernaut.openzeppelin.com/level/0xb6c2Ec883DaAac76D8922519E63f875c2ec65575)
 
+## In A Nutshell
+
+> `selfdestruct` can forcibly send ether to any other address.
+
 ## Concepts
 
 1. The understanding of `selfdestruct`.
