@@ -1,5 +1,9 @@
 [Level 5. Token](https://ethernaut.openzeppelin.com/level/0x478f3476358Eb166Cb7adE4666d04fbdDB56C407)
 
+## In A Nutshell
+
+> In previous versions, automatic checking for overflow and underflow was not included.
+
 ## Concepts
 
 1. Overflow and underflow of integer.
