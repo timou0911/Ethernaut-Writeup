@@ -1,5 +1,9 @@
 [Level 8. Vault](https://ethernaut.openzeppelin.com/level/0xB7257D8Ba61BD1b3Fb7249DCd9330a023a5F3670)
 
+## In A Nutshell
+
+> Variables in a contract are visible to anyone even if they're `private`.
+
 ## Concepts
 
 1. Understanding the real purpose of modifier `private`.
