@@ -1,5 +1,9 @@
 [Level 3. Coin Flip](https://ethernaut.openzeppelin.com/level/0xA62fE5344FE62AdC1F356447B669E9E6D10abaaF)
 
+## In A Nutshell
+
+> If a function calls another, then they will both be in the same block.
+
 ## Concepts
 
 1. How to call other contracts’ functions.
@@ -28,7 +32,7 @@
 
     1. The code utilizes the block hash of the previous block and a large number to determine the outcome of a coin flip.
     
-    2. Since the large number won’t change, the only factor we should concern about is the block number.
+    2. Since the large number won’t change, the only factor we should be concerned about is the block number.
     
 2. The method to retrieve block number.
 
