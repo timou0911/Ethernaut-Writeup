@@ -1,5 +1,9 @@
 [Level 2. Fallout](https://ethernaut.openzeppelin.com/level/0x676e57FdBbd8e5fE1A7A3f4Bb1296dAC880aa639)
 
+## In A Nutshell
+
+> Mistyping should be concerned.
+
 ## Concepts
 
 1. The rules and the evolution of `constructors`.
