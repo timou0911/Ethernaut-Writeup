@@ -1,5 +1,9 @@
 [Level 4. Telephone](https://ethernaut.openzeppelin.com/level/0x2C2307bb8824a0AbBf2CC7D76d8e63374D2f8446)
 
+## In A Nutshell
+
+> `msg.sender` is the most recent caller, while `tx.origin` is the original initiator.
+
 ## Concepts
 
 1. The meaning of `msg.sender` and `tx.origin`, as well as the difference between these two global variables.
