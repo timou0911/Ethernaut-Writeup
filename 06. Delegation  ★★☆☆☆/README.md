@@ -18,7 +18,7 @@
 
 2. In order to use `delegatecall`, we will need to call `fallback` function and include the function signature in `msg.data`, specifying the function we want to call (`pwn()` here).
 
-3. Since we’re using `delegatecall`, the function operates in the context of `Delegation`, meaning `pwn` changes the `owner` in `Delegation`, not `Delegate`.
+3. Since we’re using `delegatecall`, the `msg.sender` in `Delegate` is our EOA, not `Delegation`.
 
 ## Detailed Steps
 
