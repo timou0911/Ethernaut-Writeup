@@ -14,7 +14,9 @@
 This is a classic example of how re-entrancy can be dangerous.
 
 1. We create a malicious contract and call `withdraw()`. (Be sure to implement `receive()` or `fallback()` in your contract to receive ETH.)
+ 
 2. The key to re-entrancy is creating recursion, so we call `withdraw()` again in our `receive()` or `fallback()`.
+
 3. Notice that the funds are transferred to our contract before the balance is reduced. So when we call `withdraw()` a second time, the balance has not yet changed! This allows us to withdraw more funds than intended.
 
 ## Detailed Steps
