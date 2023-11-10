@@ -3,7 +3,7 @@
 ## Concept
 
 1. Re-entrancy attack.
-2. `receive()` function.
+2. `receive()` & `fallback()` function.
 
 ## Level Target
 
