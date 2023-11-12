@@ -91,3 +91,15 @@ function invokeFunction(address payable to, uint256 value) public payable {
 	require(success, "Tx Failed");
 }
 ```
+
+## Two Methods to Receive Ethers: `receive()` & `fallback()`
+
+* `msg.data` is empty:
+  
+  * If `receive()` exists, then `receive()` is triggered.
+ 
+  * If `receive()` doesn't exist and `fallback()` exists, then `fallback()` is trigger.
+
+* `msg.data` is not empty → `fallback()` is triggered.
+
+* If both aren't implemented, then a contract can't reveice ethers.
