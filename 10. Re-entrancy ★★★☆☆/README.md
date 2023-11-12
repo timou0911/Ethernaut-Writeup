@@ -26,5 +26,12 @@ This is a classic example of how re-entrancy can be dangerous.
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation/blob/main/10.%20Re-entrancy%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
 
-## Two Key in Re-entrancy & How to Avoid it
+## Two Key in Re-entrancy
+
+1. External call
+
+2. SHared States (Shared before and after calling)
+
+## How to Avoid it
+
 
