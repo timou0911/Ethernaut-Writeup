@@ -15,9 +15,9 @@
 
 ## Breakdown & Analysis
 
-1. In order to claim the kingship, we will need to call `receive` with ether equal or more than the current prize. 
+1. In order to claim the kingship, we will need to call `receive()` with ether equal or more than the current prize. 
 
-2. To ensure that the kingship cannot be taken when submitting the instance, we need a contract without implementing `fallback` and `receive`, so all we need is a contract that has a function to call `receive`.
+2. To ensure that the kingship cannot be taken when submitting the instance, we need a contract without implementing `fallback()` and `receive()`, so all we need is a contract that has a function to call `receive()`.
 
 3. It's important to note that neither send nor transfer will work in this scenario, as the operation in receive costs more than the 2300 gas limit imposed on both methods.
 
@@ -29,11 +29,11 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation
 await contract.prize().then(v => fromWei(v).toString()) // check the prize required to take the kingship
 await contract._king() // check if kingship has been taken
 ```
-## Three Methods to Send Ethers: `send`, `transfer`, & `call`
+## Three Methods to Send Ethers: `send()`, `transfer()`, & `call()`
 
-### `send`
+### `send()`
 
-1. This method has a gas limit of 2300 gas, which means that `receive` or `fallback` in the receiver contract can’t implement complicated operatioln.
+1. This method has a gas limit of 2300 gas, which means that `receive()` or `fallback()` in the receiver contract can’t implement complicated operatioln.
 
 2. It won’t `revert` if the transaction fails.
 
@@ -49,9 +49,9 @@ function Send(address payable to, uint256 amount) external payable {
 }
 ```
 
-### `transfer`
+### `transfer()`
 
-1. This method has a gas limit of 2300 gas, which means that `receive` or `fallback` in the receiver contract can’t implement complicated operatioln.
+1. This method has a gas limit of 2300 gas, which means that `receive()` or `fallback()` in the receiver contract can’t implement complicated operatioln.
 
 2. Automatically `revert` if the transaction fails.
 
@@ -61,9 +61,9 @@ function Transfer(address payable to, uint amount) external payable {
 }
 ```
 
-### `call`
+### `call()`
 
-1. This method allows users to customize the gas limit and enables support for `receive` or `fallback` in the receiver contract to implements complicated operations.
+1. This method allows users to customize the gas limit and enables support for `receive()` or `fallback()` in the receiver contract to implements complicated operations.
 
 2. It won’t `revert` if the transaction fails.
 
@@ -73,7 +73,7 @@ function Transfer(address payable to, uint amount) external payable {
     
     2. `bytes memory data`: the return value of called function.
 
-4. Users use `call` to invoke functions in another contract and send ethers along with it, even without knowledge of its ABI.
+4. Users use `call()` to invoke functions in another contract and send ethers along with it, even without knowledge of its ABI.
 
 ```Solidity
 // use call to send ethers to another contract
