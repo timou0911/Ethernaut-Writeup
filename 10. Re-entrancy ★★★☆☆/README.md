@@ -30,7 +30,7 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation
 
 1. External call
 
-2. SHared States (Shared before and after calling)
+2. Shared States (Shared before and after calling)
 
 ## How to Avoid it
 
