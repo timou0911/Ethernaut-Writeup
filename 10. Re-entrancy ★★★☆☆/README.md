@@ -26,12 +26,18 @@ This is a classic example of how re-entrancy can be dangerous.
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation/blob/main/10.%20Re-entrancy%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
 
-## Two Key in Re-entrancy
+## Two Keys in Re-entrancy
 
-1. External call
+1. External call (e.g. `fallback` & `receive`)
 
 2. Shared States (Shared before and after calling)
 
-## How to Avoid it
+## Mitigation
 
+1. [Rentrancy Gaurd](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol)
 
+2. Check-Effect-Interaction (CEI)
+
+   Check requirements -> Modify state -> External call.
+
+3. [Pull Payment Strategy](https://docs.openzeppelin.com/contracts/2.x/api/payment#PullPayment)
