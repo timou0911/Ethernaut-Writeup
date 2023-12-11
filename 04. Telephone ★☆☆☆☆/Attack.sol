@@ -7,7 +7,7 @@ interface ITelephone {
 
 contract Attack {
 
-    address target;
+    address private immutable target;
     address myAccount;
 
     constructor(address taregtAddr, address accountAddr) {
