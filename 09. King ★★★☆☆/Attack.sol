@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 contract Attack {
 
-    address payable target;
+    address payable private immutable targetAddr;
 
     constructor(address targetAddr) {
         target = payable(targetAddr);
