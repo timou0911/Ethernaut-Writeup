@@ -91,4 +91,4 @@ Here’s one possible hacking process:
 
 Attackers may utilize soical engineering to incresase the success rate. Also, they can create multiple contracts to hide their real purpose.
 
-To protect your contract, it’s not suitable to check permission through `tx.origin`. **A better practice is to use `msg.sneder`.**
+To protect your contract, it’s not suitable to check permission through `tx.origin`. **A better practice is to use `msg.sender`.**
