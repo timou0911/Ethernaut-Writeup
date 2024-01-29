@@ -38,6 +38,6 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut-Solution-and-Explanation
 
 2. Check-Effect-Interaction (CEI)
 
-   Check requirements -> Modify state -> External call.
+   Check requirements -> Modify state within the contract -> Interact with other contracts.
 
 3. [Pull Payment Strategy](https://docs.openzeppelin.com/contracts/2.x/api/payment#PullPayment)
