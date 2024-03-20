@@ -20,6 +20,7 @@ contract Attack {
         target.goTo(0);
     }
 
+    // We implement our own `isLastFloor` to let `goTo` call!
     function isLastFloor(uint256 _floor) public returns (bool) {
         if (isFirstCall) {
             isFirstCall = false;
