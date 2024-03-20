@@ -15,11 +15,14 @@
 
 ## Breakdown & Analysis
 
-
+1. In Solidity, boolean values are default set to `false` if not explicitly initialized.
+2. In contract `Elevator`, the only code that modifies the value of `top` is located in function `goTo`, specifically inside `if` statement.
+3. To execute the code inside `if` statement, `isLastFloor(_floor)` should return `false`.
+4. Inside the `if` statement, `top` can be set to `true` only if `isLastFloor(_floor)`  returns `true`.
 
 ## Detailed Steps
 
-
+See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/11.%20Elevator%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
 
 ## State Modifier - `pure` & `view`
 
