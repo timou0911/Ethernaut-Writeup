@@ -20,6 +20,8 @@
 3. To execute the code inside `if` statement, `isLastFloor(_floor)` should return `false`.
 4. Inside the `if` statement, `top` can be set to `true` only if `isLastFloor(_floor)`  returns `true`.
 
+Notice that isLastFloor(_floor) is called twice. To achieve the desired behavior, the first call  should return false, while the second call should return true.
+
 ## Detailed Steps
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/11.%20Elevator%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
