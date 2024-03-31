@@ -26,5 +26,18 @@ Notice that `isLastFloor(_floor)` is called twice. To achieve the desired behavi
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/11.%20Elevator%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
 
-## State Modifier - `pure` & `view`
+## State Modifier - `view` & `pure`
 
+* `view` modifier indicates that the function can only read the state but cannot write(change) the state of the contract. Mostly used in getter functions.
+* `pure` modifier indicates that the function can neither read nor write the state of the contract.
+
+|      | view | pure |
+| ---- | ---- | ---- |
+| read |  ✅ |  ❌ |
+| write |  ❌ |  ❌ |
+
+_Actions considered as write: modifying state variables, emitting events, sending ether, `selfdestruct`, creating contracts, and calling non-view and non-pure functions._
+
+_Actions considered as read: reading state variables, accessing members of `block`, `tx`, `msg` (except `msg.sig` and `msg.data`), accessing address balance, and calling non-pure functions._
+
+Both `view` function and `pure` functions don't cost gas if called from outside the contract.
