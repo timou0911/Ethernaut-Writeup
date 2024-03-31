@@ -20,7 +20,7 @@
 3. To execute the code inside `if` statement, `isLastFloor(_floor)` should return `false`.
 4. Inside the `if` statement, `top` can be set to `true` only if `isLastFloor(_floor)`  returns `true`.
 
-Notice that `isLastFloor(_floor)` is called twice. To achieve the desired behavior, the first call  should return false, while the second call should return true.
+Notice that `isLastFloor(_floor)` is called twice. To achieve the desired behavior, the first call should return `false`, while the second call should return `true`.
 
 ## Detailed Steps
 
