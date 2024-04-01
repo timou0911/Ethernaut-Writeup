@@ -11,7 +11,7 @@
 
 ## Level Target
 
-1. Reach the top of the building, aka make the state variable `top` to `true`.
+1. Reach the top of the building, which means we should make the state variable `top` to `true`.
 
 ## Breakdown & Analysis
 
