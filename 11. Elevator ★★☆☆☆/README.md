@@ -22,6 +22,8 @@
 
 Notice that `isLastFloor(_floor)` is called twice. To achieve the desired behavior, the first call should return `false`, while the second call should return `true`.
 
+Since the logic of `isLastFloor` is not implemented, we can create our own `isLastFloor`!
+
 ## Detailed Steps
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/11.%20Elevator%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
