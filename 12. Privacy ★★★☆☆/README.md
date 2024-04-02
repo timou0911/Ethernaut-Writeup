@@ -2,7 +2,7 @@
 
 ## In A Nutshell
 
-> Although can't be accessed by other contracts, a `private` state variable is visible on chain by reading its slot.
+> Although can't be accessed by other contracts, a `private` state variable is visible on chain by reading its slot. (similar concept to [level 8. Vault](https://github.com/timou0911/Ethernaut_Writeup/blob/main/08.%20Vault%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/README.md))
 
 ## Concept
 
