@@ -1,4 +1,4 @@
-*// SPDX-License-Identifier: MIT*
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.0;
 
@@ -20,7 +20,7 @@ contract Privacy {
     locked = false;
   }
 
-*/*
+/*
     A bunch of super advanced solidity algorithms...
 
       ,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`
@@ -28,6 +28,6 @@ contract Privacy {
       *.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^         ,---/V\
       `*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.    ~|__(o.o)
       ^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'^`*.,*'  UU  UU
-  */*
+  */
 
 }
