@@ -2,7 +2,7 @@
 
 ## In A Nutshell
 
-> 
+> Although can't be accessed by other contracts, a `private` state variable is visible on chain by reading its slot.
 
 ## Concept
 
