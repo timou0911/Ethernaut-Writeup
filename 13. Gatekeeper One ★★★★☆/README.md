@@ -19,6 +19,6 @@
 
 ## Detailed Steps
 
-See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/11.%20Elevator%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86/Attack.sol).
+See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/13.%20Gatekeeper%20One%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86/Attack.sol).
 
 ## 
