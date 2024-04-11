@@ -6,16 +6,22 @@
 
 ## Concept
 
-1. `gasleft()` function.
-2. Difference between `msg.sender` and `tx.origin`.
+1. Difference between `msg.sender` and `tx.origin`.
+2. `gasleft()` function.
+3. Type casting/conversion in Solidity.
 
 ## Level Target
 
-1. Past the gatekeeper and register as an entrant.
+1. Pass all the modifiers in function `enter()`.
 
 ## Breakdown & Analysis
 
-1. 
+### Modifier `gateOne()`
+We've come across a similar concept in [level 4. Telephone](https://github.com/timou0911/Ethernaut_Writeup/blob/main/04.%20Telephone%20%E2%98%85%E2%98%86%E2%98%86%E2%98%86%E2%98%86/README.md).
+Simply create a contract to invoke our target, then `tx.origin` and `msg.sender` will be different since `tx.origin` refers to our EOA, while `msg.sender` represents the contract we've deployed.
+
+### Modifier `gateTwo()`
+
 
 ## Detailed Steps
 
