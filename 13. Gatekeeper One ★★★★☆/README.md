@@ -2,7 +2,7 @@
 
 ## In A Nutshell
 
-> 
+> Type casting in Solidity and how to desginate gas amount.
 
 ## Concept
 
