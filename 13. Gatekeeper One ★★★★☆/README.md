@@ -33,7 +33,17 @@ Another advantage of using `call()` instead of directly calling a contract is th
 ### Modifier `gateThree()`
 We start by showcasing `bytes8 _gateKey` with the value `0x b0 b1 b2 b3 b4 b5 b6 b7`, where each `b_i` represents one byte. Then, we dissect each require() statement to determine the mask.
 
+`uint32(uint64(_gateKey)) == uint16(uint64(_gateKey))`:
 
+>`uint32(uint64(_gateKey))` equals to `0x b4 b5 b6 b7`; `uint16(uint64(_gateKey))` equals to `0x b6 b7`, which means if `0x b4 b5 b6 b7 == 0x b6 b7`, then `b4 b5` must be zero.
+
+`uint32(uint64(_gateKey)) != uint64(_gateKey)`:
+
+>`uint32(uint64(_gateKey))` equals to `0x b4 b5 b6 b7`; `uint64(_gateKey)` equals to `0x b0 b1 b2 b3 b4 b5 b6 b7`, which means if `0x b4 b5 b6 b7 != 0x b0 b1 b2 b3 b4 b5 b6 b7`, then `b0 b1 b2 b3` must not be zero.
+
+`uint32(uint64(_gateKey)) == uint16(uint160(tx.origin))`:
+
+>`uint32(uint64(_gateKey))` equals to `0x b4 b5 b6 b7`; `uint16(uint160(tx.origin))` equals to first two bytes of `tx.origin`, which means `b6 b7` should be first two bytes of `tx.origin`.
 
 ## Detailed Steps
 
