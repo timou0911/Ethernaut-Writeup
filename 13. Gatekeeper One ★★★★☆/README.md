@@ -28,6 +28,8 @@ In our scenario, we aim to make the remaining gas a multiple of 8191. This requi
 
 One approach is to navigate the debugger in Remix, although this requires knowledge of EVM opcodes. Alternatively, we can iterate through an additional gas amounts from 0 to 8191-1, testing each possibility until we find the desired gas remainder. Since the minimum gas amount for an external call is 21000, we need to establish a threshold for our calculations.
 
+Another advantage of using `call()` instead of directly calling a contract is that `call()` does not revert if it fails to pass a modifier. In contrast, directly calling the contract will trigger a revert if the modifier check fails.
+
 ### Modifier `gatThree()`
 
 
