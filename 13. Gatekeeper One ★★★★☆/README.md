@@ -45,6 +45,8 @@ We start by showcasing `bytes8 _gateKey` with the value `0x b0 b1 b2 b3 b4 b5 b6
 
 >`uint32(uint64(_gateKey))` equals to `0x b4 b5 b6 b7`; `uint16(uint160(tx.origin))` equals to first two bytes of `tx.origin`, which means `b6 b7` should be first two bytes of `tx.origin`.
 
+We can deduce that `b0 b1 b2 b3` must not be zero, `b4 b5` should be zero, and `b6 b7` should match the last two bytes of tx.origin. We then apply the mask `0xFFFFFFFF0000FFFF` to `tx.origin` to derive the desired key. (`0xFF` -> 11111111; `0x00` -> 00000000)
+
 ## Detailed Steps
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/13.%20Gatekeeper%20One%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86/Attack.sol).
