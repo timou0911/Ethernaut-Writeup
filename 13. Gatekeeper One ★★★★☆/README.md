@@ -30,7 +30,9 @@ One approach is to navigate the debugger in Remix, although this requires knowle
 
 Another advantage of using `call()` instead of directly calling a contract is that `call()` does not revert if it fails to pass a modifier. In contrast, directly calling the contract will trigger a revert if the modifier check fails.
 
-### Modifier `gatThree()`
+### Modifier `gateThree()`
+We start by showcasing `bytes8 _gateKey` with the value `0x b0 b1 b2 b3 b4 b5 b6 b7`, where each `b_i` represents one byte. Then, we dissect each require() statement to determine the mask.
+
 
 
 ## Detailed Steps
