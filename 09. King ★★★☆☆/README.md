@@ -90,6 +90,14 @@ function invokeFunction(address payable to, uint256 value) public payable {
 	);
 	require(success, "Tx Failed");
 }
+
+// we can specify the gas, too
+function invokeFunction(address payable to, uint256 value) public payable {
+	(bool success, bytes memory data) = to.call{gas: 5000, value: msg.value}(
+		abi.encodeWithSignature("changeValue(uint256)", value)
+	);
+	require(success, "Tx Failed");
+}
 ```
 
 ## Two Methods to Receive Ethers: `receive()` & `fallback()`
