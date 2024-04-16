@@ -35,17 +35,19 @@ We start by showcasing `bytes8 _gateKey` with the value `0x b0 b1 b2 b3 b4 b5 b6
 
 `uint32(uint64(_gateKey)) == uint16(uint64(_gateKey))`:
 
->`uint32(uint64(_gateKey))` equals to `0x b4 b5 b6 b7`; `uint16(uint64(_gateKey))` equals to `0x b6 b7`, which means if `0x b4 b5 b6 b7 == 0x b6 b7`, then `b4 b5` must be zero.
+>`uint32(uint64(_gateKey))` equals to `b4 b5 b6 b7`; `uint16(uint64(_gateKey))` equals to `b6 b7`, which means if `0x b4 b5 b6 b7 == 0x b6 b7`, then `b4 b5` must be zero.
 
 `uint32(uint64(_gateKey)) != uint64(_gateKey)`:
 
->`uint32(uint64(_gateKey))` equals to `0x b4 b5 b6 b7`; `uint64(_gateKey)` equals to `0x b0 b1 b2 b3 b4 b5 b6 b7`, which means if `0x b4 b5 b6 b7 != 0x b0 b1 b2 b3 b4 b5 b6 b7`, then `b0 b1 b2 b3` must not be zero.
+>`uint32(uint64(_gateKey))` equals to `b4 b5 b6 b7`; `uint64(_gateKey)` equals to `b0 b1 b2 b3 b4 b5 b6 b7`, which means if `b4 b5 b6 b7 != b0 b1 b2 b3 b4 b5 b6 b7`, then `b0 b1 b2 b3` must not be zero.
 
 `uint32(uint64(_gateKey)) == uint16(uint160(tx.origin))`:
 
->`uint32(uint64(_gateKey))` equals to `0x b4 b5 b6 b7`; `uint16(uint160(tx.origin))` equals to first two bytes of `tx.origin`, which means `b6 b7` should be first two bytes of `tx.origin`.
+>`uint32(uint64(_gateKey))` equals to `b4 b5 b6 b7`; `uint16(uint160(tx.origin))` equals to first two bytes of `tx.origin`, which means `b6 b7` should be first two bytes of `tx.origin`.
 
-We can deduce that `b0 b1 b2 b3` must not be zero, `b4 b5` should be zero, and `b6 b7` should match the last two bytes of tx.origin. We then apply the mask `0xFFFFFFFF0000FFFF` to `tx.origin` to derive the desired key. (`0xFF` -> 11111111; `0x00` -> 00000000)
+We can deduce that `b0 b1 b2 b3` must not be zero, `b4 b5` should be zero, and `b6 b7` should match the last two bytes of `tx.origin`. We then apply the mask `0xFFFFFFFF0000FFFF` to `tx.origin` with bitwise `AND` operation to derive the desired key. (`0xFF` = 11111111; `0x00` = 00000000; i & 1 = i; i & 0 = 0)
+
+_Two hexadecimals = 1 byte._
 
 ## Detailed Steps
 
