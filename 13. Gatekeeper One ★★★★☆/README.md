@@ -43,7 +43,7 @@ We start by showcasing `bytes8 _gateKey` with the value `0x b0 b1 b2 b3 b4 b5 b6
 
 * `uint32(uint64(_gateKey)) == uint16(uint160(tx.origin))`:
 
->`uint32(uint64(_gateKey))` equals to `b4 b5 b6 b7`; `uint16(uint160(tx.origin))` equals to first two bytes of `tx.origin`, which means `b6 b7` should be first two bytes of `tx.origin`.
+>`uint32(uint64(_gateKey))` equals to `b4 b5 b6 b7`; `uint16(uint160(tx.origin))` equals the first two bytes of `tx.origin`, which means `b6 b7` should be first two bytes of `tx.origin`.
 
 We can deduce that `b0 b1 b2 b3` must not be zero, `b4 b5` should be zero, and `b6 b7` should match the last two bytes of `tx.origin`. We then apply the mask `0xFFFFFFFF0000FFFF` to `tx.origin` with bitwise `AND` operation to derive the desired key. (`0xFF` = 11111111; `0x00` = 00000000; i & 1 = i; i & 0 = 0)
 
@@ -57,8 +57,25 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/13.%20
 
 > `gasleft() returns (uint256)`: remaining gas
 
-`gasleft()` is used for estimating gas cost and protecting against re-entrancy attacks.
+`gasleft()` estimates gas cost and protects against re-entrancy attacks.
 
 _Before version 0.5, `gasleft()` was named `msg.gas()`._
 
 ## Type Conversion in Solidity
+
+* Cast from small-sized `uint`/`int` to large-sized `uint`/`int`: value doesn't change, padding bits are added to the left.
+
+     ```Solidity
+     uint8 a = 0x12;
+     uint16 b = uint16(a); // b = 0x0012, padding bits are added to the left
+     ```
+      
+* Cast from large-sized `uint`/`int` to small-sized `uint`/`int`: value may change since higher bits are cut.
+
+     ```Solidity
+     uint16 a = 0x1234;
+     uint8 b = uint8(a); // b = 0x34, since higher bits(0x12) are cut
+     ```
+* 
+
+    
