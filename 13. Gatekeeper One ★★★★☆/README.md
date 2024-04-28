@@ -67,39 +67,51 @@ _Before version 0.5, `gasleft()` was named `msg.gas()`._
 
      ```Solidity
      uint8 a = 0x12;
-     uint16 b = uint16(a); // b = 0x0012, padding bits are added to the left
+     uint16 b = uint16(a); // b = 0x0012, padding bits are added to the left (explicit conversion)
+     uint16 c = b; // This also works since no bit is lost (implicit conversion)
      ```
       
 * Casting from large-sized `uint`/`int` to small-sized `uint`/`int`: value may change since higher bits are cut.
 
      ```Solidity
      uint16 a = 0x1234;
-     uint8 b = uint8(a); // b = 0x34, since higher bits(0x12) are cut
+     uint8 b = uint8(a); // b = 0x34, since higher bits(0x12) are cut (explicit conversion is required since some bits are lost)
      ```
+* Casting from `int` to `uint` would yield interesting results.
+
+    ```Solidity
+    int8 a = -1; // a is represented as 11111111 in binary (with two's complement).
+    uint8 b = uint8(a); // b = 255, which is 11111111 in binary, too.
+    // int8 has a range from -2^4 to 2^4 - 1, so 11111111 can only represent -1, not 255
+    // uint8 has a range from 0 to 2^8 - 1, so 11111111 can only represent 255, not -1
+    ```
+  
 * Casting from small-sized `bytes` to large-sized `bytes`: value doesn't change, padding bits are added to the right.
 
      ```Solidity
      bytes2 a = 0x1234;
-     bytes4 b = bytes4(a); // b = 0x12340000
+     bytes4 b = bytes4(a); // b = 0x12340000 (explicit conversion)
+     bytes4 c = a; // implicit conversion
      ```
 
 * Casting from large-sized `bytes` to small-sized `bytes`: value may change since higher bits are cut.
   
     ```Solidity
     bytes4 a = 0x1234;
-    bytes2 b = bytes2(a); // b = 0x12
+    bytes2 b = bytes2(a); // b = 0x12 (explicit conversion is required since some bits are lost)
     ```
 
-* Casting between `uint` and fix-sized bytes if feasible if they have the same size.
+* Casting between `uint` and fix-sized bytes is feasible if they have the same size.
 
-  ```Solidity
-  bytes4 a = 0x12345678;
-  uint32 b = uint32(a);
-  ```
+    ```Solidity
+    bytes4 a = 0x12345678;
+    uint32 b = uint32(a);
+    ```
 
-* Casting from `address` to `uint` requires a conversion to `uint160` first.
+* Casting from `address` to `uint` requires a conversion to `uint160` first. (same for `bytes`)
 
-  ```Solidity
-  address a = 0x12....;
-  uint256 b = uin256(uint160(a));
-  ```
+    ```Solidity
+    address a = 0x12....;
+    uint256 b = uint256(uint160(a)); // address is 256 160 bits long
+    bytes24 c = bytes24(bytes20(a)); // address is 20 bytes long
+    ```
