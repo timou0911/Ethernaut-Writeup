@@ -63,19 +63,43 @@ _Before version 0.5, `gasleft()` was named `msg.gas()`._
 
 ## Type Conversion in Solidity
 
-* Cast from small-sized `uint`/`int` to large-sized `uint`/`int`: value doesn't change, padding bits are added to the left.
+* Casting from small-sized `uint`/`int` to large-sized `uint`/`int`: value doesn't change, padding bits are added to the left.
 
      ```Solidity
      uint8 a = 0x12;
      uint16 b = uint16(a); // b = 0x0012, padding bits are added to the left
      ```
       
-* Cast from large-sized `uint`/`int` to small-sized `uint`/`int`: value may change since higher bits are cut.
+* Casting from large-sized `uint`/`int` to small-sized `uint`/`int`: value may change since higher bits are cut.
 
      ```Solidity
      uint16 a = 0x1234;
      uint8 b = uint8(a); // b = 0x34, since higher bits(0x12) are cut
      ```
-* 
+* Casting from small-sized `bytes` to large-sized `bytes`: value doesn't change, padding bits are added to the right.
 
-    
+     ```Solidity
+     bytes2 a = 0x1234;
+     bytes4 b = bytes4(a); // b = 0x12340000
+     ```
+
+* Casting from large-sized `bytes` to small-sized `bytes`: value may change since higher bits are cut.
+  
+    ```Solidity
+    bytes4 a = 0x1234;
+    bytes2 b = bytes2(a); // b = 0x12
+    ```
+
+* Casting between `uint` and fix-sized bytes if feasible if they have the same size.
+
+  ```Solidity
+  bytes4 a = 0x12345678;
+  uint32 b = uint32(a);
+  ```
+
+* Casting from `address` to `uint` requires a conversion to `uint160` first.
+
+  ```Solidity
+  address a = 0x12....;
+  uint256 b = uin256(uint160(a));
+  ```
