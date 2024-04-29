@@ -16,12 +16,14 @@
 ## Breakdown & Analysis
 
 ### Modifier `gateOne()`
-The first gate is same as [level 13. Gatekeeper One](https://github.com/timou0911/Ethernaut_Writeup/blob/main/13.%20Gatekeeper%20One%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86/README.md).
+The first gate is same as [level 13. Gatekeeper One](https://github.com/timou0911/Ethernaut_Writeup/blob/main/13.%20Gatekeeper%20One%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86/README.md#modifier-gateone).
 
 ### Modifier `gateTwo()`
-`extcodesize()` is an assembly-level method allowing us to get the size of a contract's code at a given address.
+`extcodesize()` is an assembly-level method that enables us to determine the size of a contract's code at a specified address.
 
-Inside `extcodesize()`, we encounter another method `caller()`, which returns the call sender. However, it excludes `delegatecall()`, which returns `0x00...` when `delegatecall()` is applied.
+Within `extcodesize()`, we encounter the Yul method `caller()`, which retrieves the call sender. However, it does not account for `delegatecall()`, which returns `0x00...000` when applied, behaving similarly to `msg.sender` in the absence of `delegatecall()`.
+
+This modifier required x(the code size of our contract) to be zero, which can be accomplished by using `delegatecall()` as described above.
 
 ### Modifier `gateThree()`
 
