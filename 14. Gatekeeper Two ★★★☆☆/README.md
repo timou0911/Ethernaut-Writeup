@@ -2,11 +2,12 @@
 
 ## In A Nutshell
 
-> 
+> Some advanced concepts such as inline assembly and bitwise operations.
 
 ## Concept
 
-1. 
+1. Inline assembly.
+2. Bitwise operations.
 
 ## Level Target
 
@@ -15,12 +16,12 @@
 ## Breakdown & Analysis
 
 ### Modifier `gateOne()`
-We've come across a similar concept in [level 4. Telephone](https://github.com/timou0911/Ethernaut_Writeup/blob/main/04.%20Telephone%20%E2%98%85%E2%98%86%E2%98%86%E2%98%86%E2%98%86/README.md).
-
-Simply create a contract to invoke our target, then `tx.origin` and `msg.sender` will be different since `tx.origin` refers to our EOA, while `msg.sender` represents the contract we've deployed.
+The first gate is same as [level 13. Gatekeeper One](https://github.com/timou0911/Ethernaut_Writeup/blob/main/13.%20Gatekeeper%20One%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86/README.md).
 
 ### Modifier `gateTwo()`
+`extcodesize()` is an assembly-level method allowing us to get the size of a contract's code at a given address.
 
+Inside `extcodesize()`, we encounter another method `caller()`, which returns the call sender. However, it excludes `delegatecall()`, which returns `0x00...` when `delegatecall()` is applied.
 
 ### Modifier `gateThree()`
 
@@ -28,3 +29,10 @@ Simply create a contract to invoke our target, then `tx.origin` and `msg.sender`
 ## Detailed Steps
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/14.%20Gatekeeper%20Two%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
+
+## Inline Assembly & Yul in Solidity
+
+
+
+## Bitwise Operations
+
