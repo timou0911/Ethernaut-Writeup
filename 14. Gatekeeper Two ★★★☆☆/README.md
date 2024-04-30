@@ -21,7 +21,7 @@ The first gate is same as [level 13. Gatekeeper One](https://github.com/timou091
 ### Modifier `gateTwo()`
 `extcodesize()` is an assembly-level method that enables us to determine the size of a contract's code at a specified address.
 
-Within `extcodesize()`, we encounter the Yul method `caller()`, which retrieves the call sender. However, it does not account for `delegatecall()`, which returns `0x00...000` when applied, behaving similarly to `msg.sender` in the absence of `delegatecall()`.
+Within `extcodesize()`, the Yul method `caller()` retrieves the call sender. However, it does not consider `delegatecall()`, which returns `0x00...000` when used, functioning akin to `msg.sender` in the absence of `delegatecall()`.
 
 This modifier required x(the code size of our contract) to be zero, which can be accomplished by using `delegatecall()` as described above.
 
