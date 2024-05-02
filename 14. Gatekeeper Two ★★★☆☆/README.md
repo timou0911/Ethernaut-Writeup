@@ -28,6 +28,14 @@ This modifier required x(the code size of our contract) to be zero, which can be
 ### Modifier `gateThree()`
 Our objective is to equate the left to the right side, which represents the maximum value of `uint64`. In binary, this value is `111...111` with a length of 64 bits.
 
+
+| second bit | first bit | second bit ^ first bit |
+| ---- | ---- | ---- |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
 ## Detailed Steps
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/14.%20Gatekeeper%20Two%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
