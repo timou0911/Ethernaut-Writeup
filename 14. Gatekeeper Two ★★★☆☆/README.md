@@ -6,7 +6,7 @@
 
 ## Concept
 
-1. Inline assembly.
+1. Inline assembly and Yul.
 2. Bitwise operations.
 
 ## Level Target
@@ -26,7 +26,7 @@ Within `extcodesize()`, the Yul method `caller()` retrieves the call sender. How
 This modifier required x(the code size of our contract) to be zero, which can be accomplished by using `delegatecall()` as described above.
 
 ### Modifier `gateThree()`
-
+Our objective is to equate the left to the right side, which represents the maximum value of `uint64`. In binary, this value is `111...111` with a length of 64 bits.
 
 ## Detailed Steps
 
