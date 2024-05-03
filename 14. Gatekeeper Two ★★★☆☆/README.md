@@ -26,6 +26,10 @@ Within `extcodesize()`, the Yul method `caller()` retrieves the call sender. How
 
 This modifier required x(the code size of our contract) to be zero, which can be accomplished by using `delegatecall()` as described above.
 
+--
+
+Another method is calling the target contract in our attack contract's `constructor`.
+
 ### Modifier `gateThree()`
 Our objective is to equate the left to the right side, which represents the maximum value of `uint64`. In binary, this value is `111...111` with a length of 64 bits.
 
