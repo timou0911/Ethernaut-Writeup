@@ -22,13 +22,12 @@ The first gate is same as [level 13. Gatekeeper One](https://github.com/timou091
 ### Modifier `gateTwo()`
 `extcodesize()` is an assembly-level method that enables us to determine the size of a contract's code at a specified address.
 
-Within `extcodesize()`, the Yul method `caller()` retrieves the call sender. However, it does not consider `delegatecall()`, which returns `0x00...000` when used, functioning akin to `msg.sender` in the absence of `delegatecall()`.
+Within `extcodesize()`, the Yul method `caller()` retrieves the call sender. There are two scenarios causing `extcodesize()` to return 0:
 
-This modifier required x(the code size of our contract) to be zero, which can be accomplished by using `delegatecall()` as described above.
+1. The caller is an EOA.
+2. The caller is a CA, but is calling inside `constructor` (i.e., during the contract initialization phase).
 
---
-
-Another method is calling the target contract in our attack contract's `constructor`.
+The second scenario meets our requirement since using an EOA will not satisfy the first gate's criteria.
 
 ### Modifier `gateThree()`
 Our objective is to equate the left to the right side, which represents the maximum value of `uint64`. In binary, this value is `111...111` with a length of 64 bits.
