@@ -30,23 +30,17 @@ Within `extcodesize()`, the Yul method `caller()` retrieves the call sender. The
 The second scenario meets our requirement since using an EOA will not satisfy the first gate's criteria.
 
 ### Modifier `gateThree()`
-Our objective is to equate the left to the right side, which represents the maximum value of `uint64`. In binary, this value is `111...111` with a length of 64 bits.
+On the left side of the `==`, there's a bitwise operation called exclusive or, or XOR (`^`). It compares two binary values, returning 1 for bits that are different and 0 for bits that are the same. Also, `p ^ q = r` means `r ^ q = p`.
 
-| p | q | p ^ q |
-| ---- | ---- | ---- |
+| p | q | r |
+| - | - | - |
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
 
-On the left side of the `==`, there's a bitwise operation called exclusive or, or XOR (`^`). It compares two binary values, returning 1 for bits that are different and 0 for bits that are the same. One operand is the `uint64` representation of `msg.sender`, while the other is `_gateKey`.
+Here we need to make `uint64(bytes8(keccak256(abi.encodePacked(msg.sender)))) ^ uint64(_gateKey) == type(uint64).max`. We can simply get `_gateKey` by computing `uint64(bytes8(keccak256(abi.encodePacked(msg.sender)))) ^ type(uint64).max` ,and pass `_gateKey` to the function `enter()`.
 
-To achieve a result with all bits set to 1, each bit of `_gateKey` should be the complement of the corresponding bit in the `uint64` representation of `msg.sender`. This can be accomplished by using another bitwise operation, NOT (`~`), which negates each bit of the operand.
-
-| p | ~p |
-| - | - |
-| 0 | 1 |
-| 1 | 0 |
 
 ## Detailed Steps
 
