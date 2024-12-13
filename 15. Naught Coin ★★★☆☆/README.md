@@ -2,15 +2,16 @@
 
 ## In A Nutshell
 
-> 
+> Understanding of ERC20 spec.
 
 ## Concept
 
-
+1. `approve()` function.
+2. `transfer()` and `transferFrom()` functions.
 
 ## Level Target
 
-
+1. Make your token balance to 0.
 
 ## Breakdown & Analysis
 
