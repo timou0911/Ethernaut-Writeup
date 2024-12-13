@@ -50,7 +50,7 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/14.%20
 
 Assembly is a low-level programming language that enables closer interaction with EVM, while Yul bridges Solidity and pure Assembly. In contrast to pure Assembly, Yul incorporates elements like variables, if statements, and for loops, simplifying the writing process compared to Assembly.
 
-
+This [repo](https://github.com/andreitoma8/learn-yul) offers a comprehensive tutorial on Yul.
 
 ## Bitwise Operations
 
