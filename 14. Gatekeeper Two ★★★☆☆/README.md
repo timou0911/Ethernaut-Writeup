@@ -46,7 +46,9 @@ Here we need to make `uint64(bytes8(keccak256(abi.encodePacked(msg.sender)))) ^ 
 
 See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/14.%20Gatekeeper%20Two%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
 
-## Inline Assembly & Yul in Solidity
+## Inline Assembly(Yul) in Solidity
+
+Assembly is a low-level programming language that enables closer interaction with EVM, while Yul bridges Solidity and pure Assembly. In contrast to pure Assembly, Yul incorporates elements like variables, if statements, and for loops, simplifying the writing process compared to Assembly.
 
 
 
