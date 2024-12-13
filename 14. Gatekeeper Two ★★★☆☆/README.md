@@ -52,3 +52,9 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/14.%20
 
 ## Bitwise Operations
 
+Bitwise operations can directly manipulate the individual bits of binary numbers. These operations work at the bit level and include:
+
+* AND (`&`): Results in 1 only if both bits are 1.
+* OR (`|`): Results in 1 if at least one of the bits is 1.
+* XOR (`^`): Results in 1 if the bits are different.
+* NOT (`~`): Inverts the bits, turning 0s into 1s and 1s into 0s.
