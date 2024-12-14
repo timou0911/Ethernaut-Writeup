@@ -24,6 +24,6 @@
 
 ```js
 await contract.approve(player, toWei("1000000")); // approve ourselves
-await contract.transferFrom(player, "0xd500f37734A4DC70434Be052187161b63763d9d7", toWei("1000000")); // The second parameter can be another account besides the player.
+await contract.transferFrom(player, "0xd500f37734A4DC70434Be052187161b63763d9d7", toWei("1000000")); // The second parameter can be any account besides the player.
 await contract.balanceOf(player).then(v=>v.toString()); // check if player's balance is 0 now.
 ```
