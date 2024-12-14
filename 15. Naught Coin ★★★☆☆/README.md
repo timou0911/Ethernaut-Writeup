@@ -2,7 +2,7 @@
 
 ## In A Nutshell
 
-> Understanding of ERC20 spec.
+> Make sure to understand the ERC20 spec when inheriting it.
 
 ## Concept
 
@@ -27,3 +27,7 @@ await contract.approve(player, toWei("1000000")); // approve ourselves
 await contract.transferFrom(player, "0xd500f37734A4DC70434Be052187161b63763d9d7", toWei("1000000")); // The second parameter can be any account besides the player.
 await contract.balanceOf(player).then(v=>v.toString()); // check if player's balance is 0 now.
 ```
+
+## ERC20 Standard
+
+See [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
