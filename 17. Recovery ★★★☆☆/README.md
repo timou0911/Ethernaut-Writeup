@@ -2,7 +2,7 @@
 
 ## In A Nutshell
 
-> 
+> Recover (or remove) the 0.001 ether from the lost contract address.
 
 ## Concept
 
