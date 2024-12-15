@@ -2,14 +2,14 @@
 
 ## In A Nutshell
 
-> Recover (or remove) the 0.001 ether from the lost contract address.
+> 
 
 ## Concept
 
 1. 
 ## Level Target
 
-1. c
+1. Recover (or remove) the 0.001 ether from the lost contract address.
 
 ## Breakdown & Analysis
 
