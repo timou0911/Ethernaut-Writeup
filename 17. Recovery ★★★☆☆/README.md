@@ -17,10 +17,13 @@
 
 1. When we get a new instance of contract `Recovery`, it deploys a new `SimpleToken` contract and sends our 0.001 ether to it.
 2. From the `SimpleToken` contract we can see that function `destroy()` can send tokens(the balance of `SimpleToken`) back to us, but only if we know its address.
-3. We can obtain `SimpleToken`'s address by reviewing our address's transaction on [Etherscan](https://etherscan.io/), and then search for the destination where our 0.001 ether is ultimately transferred.
-4. Paste the address of the destination contract on Remix using `At Address`, and then call destroy()` to send our ether back.
+3. We can obtain the address on [Etherscan](https://etherscan.io/) or calculate on our own.
 
 ## Detailed Steps
 
+1. After we get the new instance, we obtain `SimpleToken`'s address by reviewing our address's transaction on [Etherscan](https://etherscan.io/).
+2. Search for the destination(`SimpleToken`) where our 0.001 ether is ultimately transferred.
+3. Paste `SimpleToken`'s code and its address on Remix using `At Address`, then call `destroy()` to send our ether back.
 
+## 
 
