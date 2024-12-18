@@ -2,7 +2,7 @@
 
 ## In A Nutshell
 
-> How to get a specific contract's address.
+> How to obtain the address of a newly deployed contract.
 
 ## Concept
 
