@@ -2,15 +2,16 @@
 
 ## In A Nutshell
 
-> 
+> Deconstructing contracts from EVM level.
 
 ## Concept
 
-1. 
+1. EVM opcode and understanding of stack.
+2. Contract bytecode comprises two parts: initialization bytecode and runtime bytecode.
 
 ## Level Target
 
-1. 
+1. Create a contract `Solver` with a size of no more than 10 bytes (10 opcodes).
 
 ## Breakdown & Analysis
 
