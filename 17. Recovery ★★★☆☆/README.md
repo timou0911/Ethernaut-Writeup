@@ -7,7 +7,7 @@
 ## Concept
 
 1. One can determine the address of a specific contract by reviewing the transaction details on [Etherscan](https://etherscan.io/).
-2. Alternatively, the address of a contract can be calculated by `keccak256(address, nonce)`.
+2. Alternatively, the address of a contract can be calculated.
 
 ## Level Target
 
@@ -25,5 +25,6 @@
 2. Search for the destination(`SimpleToken`) where our 0.001 ether is ultimately transferred.
 3. Paste `SimpleToken`'s code and its address on Remix using `At Address`, then call `destroy()` to send our ether back.
 
-## 
+## A Secretive Way to Store Ethers
 
+A contract address can be calculated in Python using `sha3(rlp.encode([normalize_address(sender), nonce]))[12:]`. Since the calculation is deterministic, the address for a future nonce can be pre-computed, allowing ethers to be sent to it in advance. Those ethers can't barely be accessed before reaching that nonce. However, one won't be able to restore them back the nonce is missed.
