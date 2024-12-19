@@ -1,4 +1,4 @@
-[Level 3. Coin Flip](https://ethernaut.openzeppelin.com/level/0xA62fE5344FE62AdC1F356447B669E9E6D10abaaF)
+[Level 3. Coin Flip](https://ethernaut.openzeppelin.com/level/3)
 
 ## In A Nutshell
 
