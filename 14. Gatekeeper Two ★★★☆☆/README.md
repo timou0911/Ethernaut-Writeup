@@ -1,4 +1,4 @@
-[Level 14. Gatekeeper Two](https://ethernaut.openzeppelin.com/level/0x0C791D1923c738AC8c4ACFD0A60382eE5FF08a23)
+[Level 14. Gatekeeper Two](https://ethernaut.openzeppelin.com/level/14)
 
 ## In A Nutshell
 
