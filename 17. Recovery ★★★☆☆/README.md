@@ -1,4 +1,4 @@
-[Level 17. Recovery](https://ethernaut.openzeppelin.com/level/0xAF98ab8F2e2B24F42C661ed023237f5B7acAB048)
+[Level 17. Recovery](https://ethernaut.openzeppelin.com/level/17)
 
 ## In A Nutshell
 
