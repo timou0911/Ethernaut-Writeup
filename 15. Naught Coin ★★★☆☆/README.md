@@ -1,4 +1,4 @@
-[Level 15. Naught Coin](https://ethernaut.openzeppelin.com/level/0x80934BE6B8B872B364b470Ca30EaAd8AEAC4f63F)
+[Level 15. Naught Coin](https://ethernaut.openzeppelin.com/level/15)
 
 ## In A Nutshell
 
