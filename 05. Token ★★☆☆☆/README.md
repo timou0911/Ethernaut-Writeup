@@ -1,4 +1,4 @@
-[Level 5. Token](https://ethernaut.openzeppelin.com/level/0x478f3476358Eb166Cb7adE4666d04fbdDB56C407)
+[Level 5. Token](https://ethernaut.openzeppelin.com/level/5)
 
 ## In A Nutshell
 
