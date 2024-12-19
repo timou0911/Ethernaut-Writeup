@@ -38,7 +38,7 @@ Runtime bytecode is the actual code deployed on chain, so we should limit its si
 1. Push `0x2a` in stack as the value for `MSTORE` -> `PUSH1 0x2a` -> `602a`.
 2. Push `0x70` in stack as the offset for `MSTORE` -> `PSH1 0x50` -> `6070`.
 3. Store `0x2a` in memory location `0x70` -> `MSTORE 0x70, 0x2a` -> `52`.
-4. Push `0x20` in stack as the offset for `RETURN -> `PUSH1 0x20` -> `6020`.
+4. Push `0x20` in stack as the offset for `RETURN` -> `PUSH1 0x20` -> `6020`.
 
 ### Initialization Bytecode
 
