@@ -1,4 +1,4 @@
-[Level 12. Privacy](https://ethernaut.openzeppelin.com/level/0x131c3249e115491E83De375171767Af07906eA36)
+[Level 12. Privacy](https://ethernaut.openzeppelin.com/level/12)
 
 ## In A Nutshell
 
