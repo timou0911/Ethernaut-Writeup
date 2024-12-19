@@ -1,4 +1,4 @@
-[Level 4. Telephone](https://ethernaut.openzeppelin.com/level/0x2C2307bb8824a0AbBf2CC7D76d8e63374D2f8446)
+[Level 4. Telephone](https://ethernaut.openzeppelin.com/level/4)
 
 ## In A Nutshell
 
