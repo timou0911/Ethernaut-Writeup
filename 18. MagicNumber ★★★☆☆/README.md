@@ -23,13 +23,15 @@
 
 `Full bytecode = initialization bytecode + runtime bytecode`
 
-One thing to note is that we must push the opcode's parameters onto the stack before using them, and stack is LIFO (Last In First Out).
+One thing to note is that we must push the opcode's parameters in the stack before using them, and stack is LIFO (Last In First Out).
 
 ### Runtime Bytecode
 
 Runtime bytecode is the actual code deployed on chain, so we should limit its size to no more than 10 bytes.
 
-
+1. To return 42(`0x2a`), the opcode used is `RETURN`. It takes two parameters: offset(the memory location of `0x2a`) and its size.
+2. To store `0x2a` in memory, the opcode used is `MSTORE` It takes two parameters: offset(the memory location where `0x2a` will be stored) and the value to store(`0x2a`).
+3. All parameters must be stored in the stack before use, so we need to call `PUSH1` for each parameter.
 
 ### Initialization Bytecode
 
