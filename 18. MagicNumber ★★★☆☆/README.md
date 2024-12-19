@@ -29,9 +29,16 @@ One thing to note is that we must push the opcode's parameters in the stack befo
 
 Runtime bytecode is the actual code deployed on chain, so we should limit its size to no more than 10 bytes.
 
-1. To return 42(`0x2a`), the opcode used is `RETURN`. It takes two parameters: offset(the memory location of `0x2a`) and its size.
-2. To store `0x2a` in memory, the opcode used is `MSTORE` It takes two parameters: offset(the memory location where `0x2a` will be stored) and the value to store(`0x2a`).
-3. All parameters must be stored in the stack before use, so we need to call `PUSH1` for each parameter.
+1. To return 42(`0x2a`), the opcode used is `RETURN`(`0xf3`). It takes two parameters: offset(the memory location of `0x2a`) and its size.
+2. To store `0x2a` in memory, the opcode used is `MSTORE`(`0x52`) It takes two parameters: offset(the memory location where `0x2a` will be stored) and the value to store(`0x2a`).
+3. All parameters must be stored in the stack before use, so we need to call `PUSH1`(`0x60`) for each parameter.
+
+---
+
+1. Push `0x2a` in stack as the value for `MSTORE` -> `PUSH1 0x2a` -> `602a`.
+2. Push `0x70` in stack as the offset for `MSTORE` -> `PSH1 0x50` -> `6070`.
+3. Store `0x2a` in memory location `0x70` -> `MSTORE 0x70, 0x2a` -> `52`.
+4. Push `0x20` in stack as the offset for `RETURN -> `PUSH1 0x20` -> `6020`.
 
 ### Initialization Bytecode
 
