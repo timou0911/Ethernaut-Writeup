@@ -15,9 +15,17 @@
 
 ## Breakdown & Analysis
 
-1. 
+1. Writing Solidity to break this level is impossible due to the size limit, so we need to write opcode instead.
+2. We need to divide our contract into initialization bytecode and runtime bytecode, and then address them separately.
+3. Initialization bytecode should copy the runtime bytecode and then return it; runtime bytecode should return 42 in this case.
 
 ## Detailed Steps
 
-1. 
+`Full bytecode = initialization bytecode + runtime bytecode`
+
+### Initialization Bytecode
+
+
+
+### Runtime Bytecode
 
