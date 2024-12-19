@@ -23,9 +23,13 @@
 
 `Full bytecode = initialization bytecode + runtime bytecode`
 
-### Initialization Bytecode
-
-
+One thing to note is that we must push the opcode's parameters onto the stack before using them, and stack is LIFO (Last In First Out).
 
 ### Runtime Bytecode
+
+Runtime bytecode is the actual code deployed on chain, so we should limit its size to no more than 10 bytes.
+
+
+
+### Initialization Bytecode
 
