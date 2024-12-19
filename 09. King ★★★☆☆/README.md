@@ -1,4 +1,4 @@
-[Level 9. King](https://ethernaut.openzeppelin.com/level/0x3049C00639E6dfC269ED1451764a046f7aE500c6)
+[Level 9. King](https://ethernaut.openzeppelin.com/level/9)
 
 ## In A Nutshell
 
