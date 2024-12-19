@@ -1,4 +1,4 @@
-[Level 1. Fallback](https://ethernaut.openzeppelin.com/level/0x3c34A342b2aF5e885FcaA3800dB5B205fEfa3ffB)
+[Level 1. Fallback](https://ethernaut.openzeppelin.com/level/1)
 
 ## In A Nutshell
 
