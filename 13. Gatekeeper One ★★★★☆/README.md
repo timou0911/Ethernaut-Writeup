@@ -1,4 +1,4 @@
-[Level 13. Gatekeeper One](https://ethernaut.openzeppelin.com/level/0xb5858B8EDE0030e46C0Ac1aaAedea8Fb71EF423C)
+[Level 13. Gatekeeper One](https://ethernaut.openzeppelin.com/level/13)
 
 ## In A Nutshell
 
