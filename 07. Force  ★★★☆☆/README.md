@@ -1,4 +1,4 @@
-[Level 7. Force](https://ethernaut.openzeppelin.com/level/0xb6c2Ec883DaAac76D8922519E63f875c2ec65575)
+[Level 7. Force](https://ethernaut.openzeppelin.com/level/7)
 
 ## In A Nutshell
 
