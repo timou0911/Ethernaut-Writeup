@@ -21,7 +21,7 @@
 
 ## Detailed Steps
 
-`Full bytecode = initialization bytecode + runtime bytecode`
+`Complete bytecode = initialization bytecode + runtime bytecode`
 
 One thing to note is that we must push the opcode's parameters in the stack before using them, and stack is LIFO (Last In First Out).
 
@@ -40,12 +40,30 @@ Runtime bytecode is the actual code deployed on chain, so we should limit its si
 3. Store `0x2a` in memory location `0x70` → `MSTORE 0x70, 0x2a` → `52`.
 4. Push `0x20` in stack as the offset for `RETURN` → `PUSH1 0x20` → `6020`.
 5. Push `0x70` in stack as the memory location for `RETURN` → `PUSH1 0x70` → `6070`.
-6. Return `0x2a` stored in memory location `0x70` → `RETURN 0x70, 0x20` → `f3`
+6. Return data in size of `0x20` from memory location `0x70` → `RETURN 0x70, 0x20` → `f3`
 
 ⇒ Runtime bytecode = `602a60705260206070f3` in size of 10 bytes.
 
 ### Initialization Bytecode
 
-Initialization bytecode serves as runtime bytecode loader and comes before runtime bytecode.
+Initialization bytecode serves as runtime bytecode loader and returns runtime bytecode to EVM.
 
-1. 
+1. To copy runtime bytecode, the opcode `CODECOPY` is used. It takes three parameters: destOffset(destination in the memory where the result will be copied), offset(byte offset in the code to copy), and code size(10 bytes = `0x0a` in this case).
+2. After copying runtime bytecode to memory, we use `RETURN` opcode to return it.
+
+---
+
+1. Push `0x0a` in stack as the size for `CODECOPY` → `PUSH1 0x0a` → `600a`.
+2. Push `0x??` in stack as the offset for `CODECOPY` → `PUSH1 0x??` → `60??`. (we will figure the position of runtime bytecode out after knowing the initialization bytecode size)
+3. Push `0x00` in stack as the destOffset for `CODECOPY` → `PUSH1 0x00` → `6000`.
+4. Copy code to memory with destOffset `0x00`, offset `0x??`, and size `0x0a` → `CODECOPY 0x00, 0x??, 0x0a` → `39`
+5. Push `0x0a` in stack as the size for `RETURN` → `PUSH1 0x0a` → `600a`.
+6. Push `0x00` in stack as the offset for `RETURN` → `PUSH1 0x00` → `6000`.
+7. Return data in size of `0x0a` from memory location `0x00` → `RETURN 0x00, 0x0a` → `f3`.
+
+⇒ Initialization bytecode = `600a60??600039600a6000f3` in size of 12 bytes, so runtime bytecode starts at position 12 (`0x0c`). `??` = `0c`.
+
+### The Complete Opcode
+
+Complete bytecode = initialization bytecode + runtime bytecode = `600a600c600039600a6000f3` + `602a60705260206070f3` = `600a600c600039600a6000f3602a60705260206070f3`.
+
