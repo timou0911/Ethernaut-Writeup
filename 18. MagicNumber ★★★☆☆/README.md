@@ -84,10 +84,10 @@ Solidity compiler(solc) generates two files: `.bin`(bytecode) & `.abi`
 
 Creation bytecode initializes the contract and can only be executed by EVM once, so it's not stored on chain. It performs several operations:
 
-1. Free Memory Pointer Initialization: set the value of the free memory pointer located at `0x40` as `0x80`.
-2. Constructor Non-payable Check: if the `constructor` is not labeled as `payable` but `msg.value` is greater than 0, the contract creation transaction will be reverted.
-3. Constructor Execution: 
-4. Runtime Bytecode Returning and Storing: 
+1. **Free Memory Pointer Initialization**: set the value of the free memory pointer located at `0x40` as `0x80`.
+2. **Constructor Non-payable Check**: if the `constructor` is not labeled as `payable` but `msg.value` is greater than 0, the contract creation transaction will be reverted.
+3. **Constructor Execution**: execute the content inside the `constructor`. (since `constructor` only executed once in the initialization phase, it's not stored on chain)
+4. **Runtime Bytecode Returning and Storing**: use `CODECOPY` to copy runtime bytecode into memory and return it to store it on chain.
 
 ### 3. Runtime
 
