@@ -92,3 +92,5 @@ Creation bytecode initializes the contract and can only be executed by EVM once,
 ### 3. Runtime
 
 The actual code stored on the blockchain, awaiting trigger.
+
+Reference: [EVM Part II: The Journey of Smart Contracts from Solidity code to Bytecode](https://medium.com/coinmonks/evm-part-ii-the-journey-of-smart-contracts-from-solidity-code-to-bytecode-a21300b23dee)
