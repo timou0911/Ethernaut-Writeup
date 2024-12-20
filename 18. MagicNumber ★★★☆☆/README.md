@@ -65,5 +65,13 @@ Initialization bytecode serves as runtime bytecode loader and returns runtime by
 
 ### The Complete Opcode
 
-Complete bytecode = initialization bytecode + runtime bytecode = `600a600c600039600a6000f3` + `602a60705260206070f3` = `600a600c600039600a6000f3602a60705260206070f3`.
+Complete bytecode = initialization bytecode + runtime bytecode = `600a600c600039600a6000f3` + `602a60705260206070f3` = `600a600c600039600a6000f3602a60705260206070f3`. This will be the `data` when we send the transaction.
 
+### Deploy the Contract and Solve It
+
+``` js
+tx = await web3.eth.sendTransaction({from: player, data: "600a600c600039600a6000f3602a60705260206070f3"}); // send the contract creation tx
+await contract.setSolver(tx.contractAddress); // call the function
+```
+
+## 
