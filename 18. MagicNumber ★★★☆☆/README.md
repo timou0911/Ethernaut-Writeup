@@ -91,3 +91,4 @@ Creation bytecode initializes the contract and can only be executed by EVM once,
 
 ### 3. Runtime
 
+The actual code stored on the blockchain, awaiting trigger.
