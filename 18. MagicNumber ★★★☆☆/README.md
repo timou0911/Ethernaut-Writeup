@@ -74,4 +74,6 @@ tx = await web3.eth.sendTransaction({from: player, data: "600a600c600039600a6000
 await contract.setSolver(tx.contractAddress); // call the function
 ```
 
-## 
+## Contract Creation Phases
+
+### 1. 
