@@ -2,15 +2,16 @@
 
 ## In A Nutshell
 
->
+> How array storage works.
 
 ## Concept
 
-1. 
+1. Dynamic array in perspective of the slots.
+2. The underflow of slots.
 
 ## Level Target
 
-1. 
+1. Claim ownership of this contract.
 
 ## Breakdown & Analysis
 
