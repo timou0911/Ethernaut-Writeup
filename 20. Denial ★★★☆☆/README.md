@@ -8,6 +8,7 @@
 
 1. A fixed amount should be set in an external call.
 2. `fallback()` and `receive()` has a 2300 gas limit.
+3. The lack of checking the return value of `call()` is dangerous.
 
 ## Level Target
 
