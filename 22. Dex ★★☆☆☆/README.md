@@ -1,4 +1,4 @@
-[Level 21. Dex](https://ethernaut.openzeppelin.com/level/22)
+[Level 22. Dex](https://ethernaut.openzeppelin.com/level/22)
 
 ## In A Nutshell
 
@@ -10,7 +10,7 @@
 
 ## Level Target
 
-1. 
+1. Drain all of at least 1 of the 2 tokens from the contract, and allow the contract to report a "bad" price of the assets.
 
 ## Breakdown & Analysis
 
