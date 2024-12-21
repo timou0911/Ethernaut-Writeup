@@ -10,7 +10,7 @@
 
 ## Level Target
 
-1. 
+1. Get the item from the shop for less than the designated price.
 
 ## Breakdown & Analysis
 
