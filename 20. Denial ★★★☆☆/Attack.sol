@@ -19,5 +19,6 @@ contract Attack {
         while(true) {
             
         }
+        // target.call(abi.encodeWithSignature("withdraw()")); // or draining the gas by re-entrancy.
     }
 }
