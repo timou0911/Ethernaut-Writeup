@@ -2,11 +2,11 @@
 
 ## In A Nutshell
 
-> Never leave interface implementation to unknown contracts.
+> It's dangerous to change the state based on untrusted contracts.
 
 ## Concept
 
-1. Never leave an interface unimplemented.
+1. Never leave an interface unimplemented or leave interface implementation to unknown contracts.
 2. `pure` and `view` functions can still be manipulated even though they can't modify states.
 
 ## Level Target
