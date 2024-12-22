@@ -16,6 +16,7 @@
 ## Breakdown & Analysis
 
 1. The formula in the function `getSwapPrice()` contains a flaw. The division will result in having more balance before each swap.
+2. We can swap token 1 and token 2 alternately.
 
 |              | DEX - Token1 | DEX - Token2 | Player - Token1 | Player - Token2 |
 | ------------ |--------------|--------------|-----------------|-----------------|
