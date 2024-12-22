@@ -41,3 +41,9 @@ await contract.swap(token2, token1, 30); // swap 4
 await contract.swap(token1, token2, 41); // swap 5
 await contract.swap(token2, token1, 45); // swap 6. Note that we can't swap with all our token2 balance since there are only 45 token2 in the pool at this time.
 ```
+
+## Getting Price From A Single Source
+
+It would be an attack vector if the contract retrieved data such as the price from a single source since hackers can manipulate that source and take advantage of it.
+
+One way to mitigate this problem is using oracles such as Chainlink. It retrieves data from multiple sources and gathers them, then sends the result onto the chain.
