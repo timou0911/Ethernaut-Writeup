@@ -8,6 +8,7 @@
 
 1. There's no floating point in Solidity.
 2. Division should be cautiously approached, as precision loss can result in serious consequences.
+3. It's dangerous to rely on single data source.
 
 ## Level Target
 
