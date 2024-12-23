@@ -16,7 +16,7 @@
 ## Breakdown & Analysis
 
 1. The only code that directly accesses `owner` is in the `constructor` so we cannot change it directly. However, the storage layouts of `Preservation` and `LibraryContract` are not aligned, which poses a risk when using `delegatecall`.
-2. Since the variable `storedTime` in `LibraryContract` is aligned with `timeZone1Library` in `Preservation, when we call `setFirstTime()`, it `delegatecall` the function `setTime()` in `LibraryContract`, but changes `timeZone1Library`'s value.
+2. Since the variable `storedTime` in `LibraryContract` is aligned with `timeZone1Library` in Preservation, when we call `setFirstTime()`, it `delegatecall` the function `setTime()` in `LibraryContract`, but changes `timeZone1Library`'s value.
 3. We first call `setFirstTime()` with the address of our malicious contract, making the next `setFirstTime()` call to be directed to our contract.
 4. The second `setFirstTime()` call will take place inside our own `setTime()`, we will need the same storage layout to be able to change `owner` in `Preservation`.
 
