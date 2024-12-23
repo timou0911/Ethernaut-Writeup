@@ -45,7 +45,7 @@ We start by showcasing `bytes8 _gateKey` with the value `0x b0 b1 b2 b3 b4 b5 b6
 
 >`uint32(uint64(_gateKey))` equals to `b4 b5 b6 b7`; `uint16(uint160(tx.origin))` equals the first two bytes of `tx.origin`, which means `b6 b7` should be first two bytes of `tx.origin`.
 
-We can deduce that `b0 b1 b2 b3` must not be zero, `b4 b5` should be zero, and `b6 b7` should match the last two bytes of `tx.origin`. We then apply the mask `0xFFFFFFFF0000FFFF` to `tx.origin` with bitwise `AND` operation to derive the desired key. (`0xFF` = 11111111; `0x00` = 00000000; i & 1 = i; i & 0 = 0)
+We can deduce that `b0 b1 b2 b3` must not be zero, `b4 b5` should be zero, and `b6 b7` should match the last two bytes of `tx.origin`. We then apply the mask `0xFFFFFFFF0000FFFF` to `tx.origin` with bitwise `AND` operation to derive the desired key. (`0xFF` = 11111111; `0x00` = 00000000; `i & 1 = i`; `i & 0 = 0`)
 
 _Two hexadecimals = 1 byte._
 
@@ -55,7 +55,7 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut_Writeup/blob/main/13.%20
 
 ## `gasleft()` function
 
-> `gasleft() returns (uint256)`: remaining gas
+> `gasleft() returns (uint256)`: remaining gas.
 
 `gasleft()` estimates gas cost and protects against re-entrancy attacks.
 
