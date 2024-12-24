@@ -15,7 +15,6 @@ interface IPuzzleWallet {
 contract Attack {
     IPuzzleWallet target;
 
-    // 0x8691077E7e91182A35BA67B90D92eE814F845618
     constructor(address targetAddr) {
         target = IPuzzleWallet(targetAddr);
     }
