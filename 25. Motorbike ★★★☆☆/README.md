@@ -6,7 +6,9 @@
 
 ## Concept
 
-1. 
+1. [EIP-1967](https://eips.ethereum.org/EIPS/eip-1967).
+2. UUPS upgradeable patterns.
+3. Openzeppelin's Initializable contract.
 
 ## Level Target
 
