@@ -10,7 +10,7 @@
 
 ## Level Target
 
-1. Hijack this wallet to become the admin of the proxy.
+1. Become the admin of `PuzzleProxy`.
 
 ## Breakdown & Analysis
 
