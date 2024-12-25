@@ -20,3 +20,6 @@
 
 ## Detailed Steps
 
+See [Attacl.sol](https://github.com/timou0911/Ethernaut-Writeup/blob/main/25.%20Motorbike%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
+
+**This solution no longer works after the Dencun upgrade since `selfdestruct()` won't remove the code. See [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780).**
