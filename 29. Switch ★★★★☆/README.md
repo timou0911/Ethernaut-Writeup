@@ -35,3 +35,14 @@ See [Attack.sol](https://github.com/timou0911/Ethernaut-Writeup/blob/main/29.%20
 
 ## How is Calldata Encoded?
 
+### Static Data Types: `uint_x`, `int_x`, `bool`, `address`, `bytes_x`, and `tuple`
+
+`uint_x`, `int_x`, `bool`, `address`, and `bytes_x` occupy 32 bytes and padded with 0.
+Each element in `tuple` will be encoded into 32 bytes and concatenated together.
+
+### Dynamic Data Types: `string`, `bytes`, and `array`
+
+The way the dynamic data is encoded follows a certain pattern: the first 32 bytes store the offset of length; the second 32 bytes store the length; the last 32 * length bytes store the actual data.
+
+* `string` & `bytes`: each character is encoded alone. One thing worth noting is that the encoded value is stored on the left-hand side of the 32 bytes.
+* `array`: each element is encoded alone.
