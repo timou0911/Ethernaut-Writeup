@@ -18,8 +18,10 @@
 1. Three contracts:
 
     1. `GoodSamaritan`: deploy instances of `Wallet` and `Coin`. The `requestDonation` function processes the donation by transferring either 10 coins or the remaining available coins, depending on the error check.
-    2. `Wallet`: 
-    3. `Coin`: 
+    2. `Wallet`: has two donate funcitons - `donate10()` which reverts `NotEnoughBalance` when balance < 10,  and `transferRemainder()` which transfer all the `Wallet`'s coin. 
+    3. `Coin`: executes the actual coin transfer notify the destination if it's a contract.
+
+2. 
 
 ## Detailed Steps
 
