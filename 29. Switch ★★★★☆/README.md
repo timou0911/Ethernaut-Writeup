@@ -23,10 +23,10 @@
 6. To trigger `flipSwitch()`, the first four bytes of `data` should be its selector(`0x30c13ade`), followed by the value of 
  parameter `_data`.
 7. Let's skip the first four bytes and look at the rest.
-     1. The first 32 bytes of the calldata should be the offset of the actual function we want to call(`turnSwitchOn()`).
-     2. The second 32 bytes are placeholders and can be random values.
-     3. The third 32 bytes should be `turnSwitchOff()`'s function elector(`0x20606e15`) for `onlyOff`'s verification.
-     4. The fourth 32 bytes will be the length information(`0x04`).
+     1. Byte 4 to byte 35 of the calldata should be the offset of the actual function we want to call(`turnSwitchOn()`).
+     2. Byte 36 to byte 67 are placeholders and can be random values.
+     3. Byte 68 to byte 99 should be `turnSwitchOff()`'s function elector(`0x20606e15`) for `onlyOff`'s verification.
+     4. The next 32 bytes will be the length information(`0x04`).
      5. The last 32 bytes will be the `turnSwitchOn()`'s function selector(`0x76227e12`).
 
 ## Detailed Steps
