@@ -2,11 +2,12 @@
 
 ## In A Nutshell
 
-> 
+> Never assume the error originated from the immediate target of the contract call; any contract in the downstream call chain can also trigger the same error.
 
 ## Concept
 
-1. 
+1. Custom errors.
+2. Leaving interface implementation to users.
 
 ## Level Target
 
@@ -18,3 +19,4 @@
 
 ## Detailed Steps
 
+See Attack.sol.
