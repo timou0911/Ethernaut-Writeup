@@ -21,7 +21,9 @@
     2. `Wallet`: has two donate funcitons - `donate10()` which reverts `NotEnoughBalance` when balance < 10,  and `transferRemainder()` which transfer all the `Wallet`'s coin. 
     3. `Coin`: executes the actual coin transfer notify the destination if it's a contract.
 
-2. 
+2. If we can make our `donate10()` revert `NotEnoughBalance`, it will execute `transferRemainder()` so that we can drain out all the coins.
+3. In `donate10()`, it calls `coin.transfer()`. Inside `transfer()` it calls `notify()` in our contract. We can revert `NotEnoughBalance` in our own `notify()` implementation.
+4. One thing worth noted is that we can't just revert every time since we still need to reveice the coins, so we should add a check to revert only if `amount` <= 10.
 
 ## Detailed Steps
 
