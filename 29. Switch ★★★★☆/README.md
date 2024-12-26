@@ -2,11 +2,12 @@
 
 ## In A Nutshell
 
-> 
+> Understanding the way calldata is encoded.
 
 ## Concept
 
-1. 
+1. `calldatacopy` opcode.
+2. 
 
 ## Level Target
 
