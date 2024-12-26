@@ -5,8 +5,6 @@ interface IGatekeeperThree {
     function enter() external;
 }
 
-// 0x5F495186De8b5A6E6AB1fB7B5D1e96F68b1347Fa
-
 contract Attack {
     IGatekeeperThree target;
 
