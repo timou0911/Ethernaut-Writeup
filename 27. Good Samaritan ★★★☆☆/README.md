@@ -15,7 +15,11 @@
 
 ## Breakdown & Analysis
 
-1. 
+1. Three contracts:
+
+    1. `GoodSamaritan`: deploy instances of `Wallet` and `Coin`. The `requestDonation` function processes the donation by transferring either 10 coins or the remaining available coins, depending on the error check.
+    2. `Wallet`: 
+    3. `Coin`: 
 
 ## Detailed Steps
 
