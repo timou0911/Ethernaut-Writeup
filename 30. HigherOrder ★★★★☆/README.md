@@ -21,7 +21,7 @@
 ```js
 const from = <your wallet address>;
 const to = contract.address;
- // 211c85ab -> function selector of registerTreasury(uint8); 000...100 -> parameter 256
+// 211c85ab -> function selector of registerTreasury(uint8); 000...100 -> parameter 256
 const calldata = "0x211c85ab0000000000000000000000000000000000000000000000000000000000000100";
 
 await ethereum.request({
