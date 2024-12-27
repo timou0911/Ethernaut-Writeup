@@ -2,11 +2,12 @@
 
 ## In A Nutshell
 
-> 
+> Before `solc` version `0.8.0`, `ABIEncoderV1` was used and it wouldn't revert when calldata was inconsistent with the parameter types.
 
 ## Concept
 
-1. 
+1. How to encode function call into calldata on our own.
+2. Difference between `ABIEncoderV1` and `ABIEncoderV2`.
 
 ## Level Target
 
@@ -14,7 +15,8 @@
 
 ## Breakdown & Analysis
 
-1. 
+1. The `solc` version used in this level is `0.6.12`, which means `ABIEncoderV1` is applied. As a result, it won't check for inconsistencies between calldata and parameter types.
+2. 
 
 ## Detailed Steps
 
