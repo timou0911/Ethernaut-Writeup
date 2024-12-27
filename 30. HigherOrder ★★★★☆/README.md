@@ -40,3 +40,9 @@ await ethereum.request({
 await contract.treasury().then(v => v.toString()) // check if treasury is set to 256
 await contract.claimLeadership();
 ```
+
+## Mitigation
+
+Use solc of the version above `0.8.0`, or explicitly add the line `pragma experimental ABIEncoderV2;`.
+
+Unlike `ABIEncoderV1`, `ABIEncoderV2` checks the consistencies between calldata and parameter types, and reverts when they don't match. Thus, it makes some function calls consume more gas.
