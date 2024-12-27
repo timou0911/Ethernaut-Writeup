@@ -10,7 +10,10 @@
 
 ## Level Target
 
-1. 
+1. The `Stake` contract's ETH balance has to be greater than 0.
+2. `totalStaked` must be greater than the `Stake` contract's ETH balance.
+3. You must be a staker.
+4. Your staked balance must be 0.
 
 ## Breakdown & Analysis
 
