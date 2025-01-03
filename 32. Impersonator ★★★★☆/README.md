@@ -10,7 +10,7 @@
 
 ## Level Target
 
-1. 
+1. Compromise the system so that anyone can open the door.
 
 ## Breakdown & Analysis
 
