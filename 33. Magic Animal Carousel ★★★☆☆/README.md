@@ -34,4 +34,4 @@
 
 ## Detailed Steps
 
-See Attack.sol
+See [Attack.sol](https://github.com/timou0911/Ethernaut-Writeup/blob/main/33.%20Magic%20Animal%20Carousel%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86/Attack.sol).
