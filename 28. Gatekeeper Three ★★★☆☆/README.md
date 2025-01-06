@@ -5,8 +5,9 @@
 > Several concepts in prior Ethernaut levels combined.
 
 ## Concept
-
-1. How to retrieve storage variables.
+1. Difference between `tx.origin` and `msg.sender`.
+2. How to retrieve storage variables.
+3. `receive()` function.
 
 ## Level Target
 
