@@ -15,7 +15,7 @@
 
 ## Breakdown & Analysis
 
-1. In order to claim the kingship, we will need to call `receive()` with ether equal or more than the current prize. 
+1. To claim the kingship, we will need to call `receive()` with ether equal or more than the current prize. 
 
 2. To ensure that the kingship cannot be taken when submitting the instance, we need a contract without implementing `fallback()` and `receive()`, so all we need is a contract that has a function to call `receive()`.
 
@@ -51,7 +51,7 @@ function Send(address payable to, uint256 amount) external payable {
 
 ### `transfer()`
 
-1. This method has a gas limit of 2300 gas, which means that `receive()` or `fallback()` in the receiver contract can’t implement complicated operatioln.
+1. This method has a gas limit of 2300 gas, which means that `receive()` or `fallback()` in the receiver contract can’t implement complicated operations.
 
 2. Automatically `revert` if the transaction fails.
 
@@ -63,7 +63,7 @@ function Transfer(address payable to, uint amount) external payable {
 
 ### `call()`
 
-1. This method allows users to customize the gas limit and enables support for `receive()` or `fallback()` in the receiver contract to implements complicated operations.
+1. This method allows users to customize the gas limit and enables support for `receive()` or `fallback()` in the receiver contract to implement complicated operations.
 
 2. It won’t `revert` if the transaction fails.
 
@@ -110,4 +110,4 @@ function invokeFunction(address payable to, uint256 value) public payable {
 
 * `msg.data` is not empty → `fallback()` is triggered.
 
-* If both aren't implemented, then a contract can't reveice ethers.
+* If both aren't implemented, a contract can't receive ethers.
