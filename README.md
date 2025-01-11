@@ -88,15 +88,18 @@ A Thorough Ethernaut Writeup.
 
 ### Precision Loss
 
-
+- [Level 22. Dex](https://github.com/timou0911/Ethernaut-Writeup/tree/main/22.%20Dex%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
 
 ### Input Validation
 
-
+- [Level 23. Dex Two](https://github.com/timou0911/Ethernaut-Writeup/tree/main/23.%20Dex%20Two%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
+- [Level 26. DoubleEntryPoint](https://github.com/timou0911/Ethernaut-Writeup/tree/main/26.%20DoubleEntryPoint%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
+- [Level 29. Switch](https://github.com/timou0911/Ethernaut-Writeup/tree/main/29.%20Switch%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
 
 ### Unchecked Return Values
 
-
+- [Level 31. Stake](https://github.com/timou0911/Ethernaut-Writeup/tree/main/31.%20Stake%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Signature Malleability
 
+- [Level 32. Impersonator](https://github.com/timou0911/Ethernaut-Writeup/tree/main/32.%20Impersonator%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
