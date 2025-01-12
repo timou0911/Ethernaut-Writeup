@@ -30,6 +30,8 @@ A Thorough Ethernaut Writeup.
 ### Overflow / Underflow
 
 - [Level 5. Token](https://github.com/timou0911/Ethernaut-Writeup/tree/main/05.%20Token%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
+- [Level 19. Alien Codex](https://github.com/timou0911/Ethernaut-Writeup/tree/main/19.%20Alien%20Codex%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
+- [Level 33. Magic Carousel](https://github.com/timou0911/Ethernaut-Writeup/tree/main/33.%20Magic%20Animal%20Carousel%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Delegation
 
