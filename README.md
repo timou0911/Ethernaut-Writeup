@@ -1,8 +1,10 @@
 A Thorough Ethernaut Writeup.
 
-### Logical Issue
+### Access Control
 
-* [Level 1. Fallback](https://github.com/timou0911/Ethernaut-Writeup/tree/main/01.%20Fallback%20%E2%98%85%E2%98%86%E2%98%86%E2%98%86%E2%98%86)
+- [Level 1. Fallback](https://github.com/timou0911/Ethernaut-Writeup/tree/main/01.%20Fallback%20%E2%98%85%E2%98%86%E2%98%86%E2%98%86%E2%98%86)
+- [Level 15. Naught Coin](https://github.com/timou0911/Ethernaut-Writeup/tree/main/15.%20Naught%20Coin%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
+- [Level 17. Recovery](https://github.com/timou0911/Ethernaut-Writeup/tree/main/17.%20Recovery%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Historic Attack (Outdated Compiler Version)
 
@@ -69,11 +71,6 @@ A Thorough Ethernaut Writeup.
 ### Risky Code Size Check
 
 - [Level 14. Gatekeeper Two](https://github.com/timou0911/Ethernaut-Writeup/tree/main/14.%20Gatekeeper%20Two%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
-
-### Access Control
-
-- [Level 15. Naught Coin](https://github.com/timou0911/Ethernaut-Writeup/tree/main/15.%20Naught%20Coin%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
-- [Level 17. Recovery](https://github.com/timou0911/Ethernaut-Writeup/tree/main/17.%20Recovery%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Storage-related Issues
 
