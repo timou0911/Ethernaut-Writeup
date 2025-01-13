@@ -101,4 +101,5 @@ A Thorough Ethernaut Writeup.
 
 ### Unchecked Return Values
 
+- [Level 20. Denial](https://github.com/timou0911/Ethernaut-Writeup/tree/main/20.%20Denial%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 - [Level 31. Stake](https://github.com/timou0911/Ethernaut-Writeup/tree/main/31.%20Stake%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
