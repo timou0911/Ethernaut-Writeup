@@ -12,9 +12,7 @@ A Thorough Ethernaut Writeup.
 
 ### Delegation
 
-- [Level 6. Delegation](https://github.com/timou0911/Ethernaut-Writeup/tree/main/06.%20Delegation%20%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
 - [Level 16. Preservation](https://github.com/timou0911/Ethernaut-Writeup/tree/main/16.%20Preservation%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
-- [Level 24. Puzzle Wallet](https://github.com/timou0911/Ethernaut-Writeup/tree/main/24.%20Puzzle%20Wallet%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
 - [Level 25. Motorbike](https://github.com/timou0911/Ethernaut-Writeup/tree/main/25.%20Motorbike%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### DoS
@@ -83,6 +81,7 @@ A Thorough Ethernaut Writeup.
 - [Level 16. Preservation](https://github.com/timou0911/Ethernaut-Writeup/tree/main/16.%20Preservation%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
 - [Level 19. Alien Codex](https://github.com/timou0911/Ethernaut-Writeup/tree/main/19.%20Alien%20Codex%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
 - [Level 24. Puzzle Wallet](https://github.com/timou0911/Ethernaut-Writeup/tree/main/24.%20Puzzle%20Wallet%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
+- [Level 25. Motorbike](https://github.com/timou0911/Ethernaut-Writeup/tree/main/25.%20Motorbike%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 - [Level 33. Magic Carousel](https://github.com/timou0911/Ethernaut-Writeup/tree/main/33.%20Magic%20Animal%20Carousel%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### `tx.origin` Related Issues
