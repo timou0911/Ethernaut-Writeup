@@ -67,6 +67,7 @@ A Thorough Ethernaut Writeup.
 ### Re-entrancy
 
 - [Level 10. Re-entrancy](https://github.com/timou0911/Ethernaut-Writeup/tree/main/10.%20Re-entrancy%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
+- [Level 20. Denial](https://github.com/timou0911/Ethernaut-Writeup/tree/main/20.%20Denial%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Risky Code Size Check
 
