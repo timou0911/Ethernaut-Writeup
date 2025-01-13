@@ -54,7 +54,7 @@ A Thorough Ethernaut Writeup.
 
 - [Level 4. Telephone](https://github.com/timou0911/Ethernaut-Writeup/tree/main/04.%20Telephone%20%E2%98%85%E2%98%86%E2%98%86%E2%98%86%E2%98%86)
 - [Level 9. King](https://github.com/timou0911/Ethernaut-Writeup/tree/main/09.%20King%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
-- [Level 28 Gatekepper Three](https://github.com/timou0911/Ethernaut-Writeup/tree/main/28.%20Gatekeeper%20Three%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
+- [Level 28. Gatekepper Three](https://github.com/timou0911/Ethernaut-Writeup/tree/main/28.%20Gatekeeper%20Three%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Re-entrancy
 
