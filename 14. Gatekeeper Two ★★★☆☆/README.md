@@ -8,7 +8,6 @@
 
 1. Inline assembly and Yul.
 2. Bitwise operations.
-3. `delegatecall()`
 
 ## Level Target
 
