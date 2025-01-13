@@ -26,9 +26,10 @@ A Thorough Ethernaut Writeup.
 
 ### Historic Attack (Outdated Compiler Version)
 
-* [Level 2. Fallout](https://github.com/timou0911/Ethernaut-Writeup/tree/main/02.%20Fallout%20%E2%98%85%E2%98%86%E2%98%86%E2%98%86%E2%98%86)
-* [Level 5. Token](https://github.com/timou0911/Ethernaut-Writeup/tree/main/05.%20Token%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
-* [Level 30. HigherOrder](https://github.com/timou0911/Ethernaut-Writeup/tree/main/30.%20HigherOrder%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
+- [Level 2. Fallout](https://github.com/timou0911/Ethernaut-Writeup/tree/main/02.%20Fallout%20%E2%98%85%E2%98%86%E2%98%86%E2%98%86%E2%98%86)
+- [Level 5. Token](https://github.com/timou0911/Ethernaut-Writeup/tree/main/05.%20Token%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
+- [Level 19. Alien Codex](https://github.com/timou0911/Ethernaut-Writeup/tree/main/19.%20Alien%20Codex%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
+- [Level 30. HigherOrder](https://github.com/timou0911/Ethernaut-Writeup/tree/main/30.%20HigherOrder%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
 
 ### Input Validation
 
