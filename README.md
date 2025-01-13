@@ -17,6 +17,7 @@ A Thorough Ethernaut Writeup.
 
 ### DoS
 
+- [Level 9. King](https://github.com/timou0911/Ethernaut-Writeup/tree/main/09.%20King%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 - [Level 20. Denial](https://github.com/timou0911/Ethernaut-Writeup/tree/main/20.%20Denial%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Forcily Sending Ethers
