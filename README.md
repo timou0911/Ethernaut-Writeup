@@ -36,6 +36,7 @@ A Thorough Ethernaut Writeup.
 - [Level 23. Dex Two](https://github.com/timou0911/Ethernaut-Writeup/tree/main/23.%20Dex%20Two%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
 - [Level 26. DoubleEntryPoint](https://github.com/timou0911/Ethernaut-Writeup/tree/main/26.%20DoubleEntryPoint%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
 - [Level 29. Switch](https://github.com/timou0911/Ethernaut-Writeup/tree/main/29.%20Switch%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
+- [Level 32. Impersonator](https://github.com/timou0911/Ethernaut-Writeup/tree/main/32.%20Impersonator%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
 
 ### Interface Misbehavior
 
