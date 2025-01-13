@@ -48,7 +48,7 @@ A Thorough Ethernaut Writeup.
 
 - [Level 8. Vault](https://github.com/timou0911/Ethernaut-Writeup/tree/main/08.%20Vault%20%E2%98%85%E2%98%85%E2%98%86%E2%98%86%E2%98%86)
 - [Level 12. Privacy](https://github.com/timou0911/Ethernaut-Writeup/tree/main/12.%20Privacy%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
-- [Level 28 Gatekepper Three](https://github.com/timou0911/Ethernaut-Writeup/tree/main/28.%20Gatekeeper%20Three%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
+- [Level 28. Gatekeeper Three](https://github.com/timou0911/Ethernaut-Writeup/tree/main/28.%20Gatekeeper%20Three%20%E2%98%85%E2%98%85%E2%98%85%E2%98%86%E2%98%86)
 
 ### Lack of Consideration in Interacting Parties
 
